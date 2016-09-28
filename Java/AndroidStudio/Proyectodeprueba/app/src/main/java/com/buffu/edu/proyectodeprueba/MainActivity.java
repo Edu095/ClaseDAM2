@@ -3,6 +3,7 @@ package com.buffu.edu.proyectodeprueba;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -15,6 +16,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Posar aquest codi a l'activitat amb els  imports pertinents
+
+
+        AlertDialog.Builder alert=new AlertDialog.Builder(this);
+        alert.setMessage("Hola!!!");
+        // boto, listener
+
+
+        alert.setPositiveButton(android.R.string.ok, null);
+        alert.show();
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -26,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
+
     }
 
     @Override
