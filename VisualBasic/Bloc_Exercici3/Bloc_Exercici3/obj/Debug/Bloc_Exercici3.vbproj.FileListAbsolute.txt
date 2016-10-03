@@ -1,0 +1,11 @@
+\\mac\home\Documents\Visual Studio 2015\Projects\Bloc_Exercici3\Bloc_Exercici3\bin\Debug\Bloc_Exercici3.exe.config
+\\Mac\Home\Documents\Visual Studio 2015\Projects\Bloc_Exercici3\Bloc_Exercici3\bin\Debug\Bloc_Exercici3.exe
+\\Mac\Home\Documents\Visual Studio 2015\Projects\Bloc_Exercici3\Bloc_Exercici3\bin\Debug\Bloc_Exercici3.pdb
+\\Mac\Home\Documents\Visual Studio 2015\Projects\Bloc_Exercici3\Bloc_Exercici3\bin\Debug\Bloc_Exercici3.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\Bloc_Exercici3\Bloc_Exercici3\obj\Debug\Bloc_Exercici3.vbprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Visual Studio 2015\Projects\Bloc_Exercici3\Bloc_Exercici3\obj\Debug\WindowsApplication1.Form1.resources
+\\Mac\Home\Documents\Visual Studio 2015\Projects\Bloc_Exercici3\Bloc_Exercici3\obj\Debug\WindowsApplication1.Resources.resources
+\\Mac\Home\Documents\Visual Studio 2015\Projects\Bloc_Exercici3\Bloc_Exercici3\obj\Debug\Bloc_Exercici3.vbproj.GenerateResource.Cache
+\\Mac\Home\Documents\Visual Studio 2015\Projects\Bloc_Exercici3\Bloc_Exercici3\obj\Debug\Bloc_Exercici3.exe
+\\Mac\Home\Documents\Visual Studio 2015\Projects\Bloc_Exercici3\Bloc_Exercici3\obj\Debug\Bloc_Exercici3.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\Bloc_Exercici3\Bloc_Exercici3\obj\Debug\Bloc_Exercici3.pdb
