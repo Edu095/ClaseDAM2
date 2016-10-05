@@ -1,0 +1,15 @@
+C:\Users\Edu\AppData\Local\Temporary Projects\PersonalitzarText\bin\Debug\PersonalitzarText.exe.config
+C:\Users\Edu\AppData\Local\Temporary Projects\PersonalitzarText\bin\Debug\PersonalitzarText.exe
+C:\Users\Edu\AppData\Local\Temporary Projects\PersonalitzarText\bin\Debug\PersonalitzarText.pdb
+C:\Users\Edu\AppData\Local\Temporary Projects\PersonalitzarText\bin\Debug\PersonalitzarText.xml
+C:\Users\Edu\AppData\Local\Temporary Projects\PersonalitzarText\obj\Debug\PersonalitzarText.vbprojResolveAssemblyReference.cache
+C:\Users\Edu\AppData\Local\Temporary Projects\PersonalitzarText\obj\Debug\PersonalitzarText.Form1.resources
+C:\Users\Edu\AppData\Local\Temporary Projects\PersonalitzarText\obj\Debug\PersonalitzarText.Resources.resources
+C:\Users\Edu\AppData\Local\Temporary Projects\PersonalitzarText\obj\Debug\PersonalitzarText.vbproj.GenerateResource.Cache
+C:\Users\Edu\AppData\Local\Temporary Projects\PersonalitzarText\obj\Debug\PersonalitzarText.exe
+C:\Users\Edu\AppData\Local\Temporary Projects\PersonalitzarText\obj\Debug\PersonalitzarText.xml
+C:\Users\Edu\AppData\Local\Temporary Projects\PersonalitzarText\obj\Debug\PersonalitzarText.pdb
+\\mac\home\Documents\Visual Studio 2015\Projects\PersonalitzarText\PersonalitzarText\bin\Debug\PersonalitzarText.exe.config
+\\mac\home\Documents\Visual Studio 2015\Projects\PersonalitzarText\PersonalitzarText\obj\Debug\PersonalitzarText.exe
+\\mac\home\Documents\Visual Studio 2015\Projects\PersonalitzarText\PersonalitzarText\obj\Debug\PersonalitzarText.xml
+\\mac\home\Documents\Visual Studio 2015\Projects\PersonalitzarText\PersonalitzarText\obj\Debug\PersonalitzarText.pdb
