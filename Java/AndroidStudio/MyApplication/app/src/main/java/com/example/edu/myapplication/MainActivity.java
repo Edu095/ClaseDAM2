@@ -1,9 +1,8 @@
-package com.buffu.edu.proyectodeprueba;
+package com.example.edu.myapplication;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -16,21 +15,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //Posar aquest codi a l'activitat amb els  imports pertinents
-
-
-        AlertDialog.Builder alert=new AlertDialog.Builder(this);
-        alert.setMessage("Hola!!!");
-        // boto, listener
-
-
-        alert.setPositiveButton(android.R.string.ok, null);
-        alert.setNegativeButton("Cancela", null);
-        alert.show();
-
-        // ^ ^ ^ fi codi copiat ^ ^ ^
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -38,13 +22,10 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action, Mi acción", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
-
-
-
     }
 
     @Override
