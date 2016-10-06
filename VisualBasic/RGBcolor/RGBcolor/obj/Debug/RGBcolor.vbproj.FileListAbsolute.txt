@@ -1,1 +1,2 @@
 \\mac\home\Documents\Visual Studio 2015\Projects\RGBcolor\RGBcolor\bin\Debug\RGBcolor.exe.config
+D:\GitHub\ClaseDAM2\VisualBasic\RGBcolor\RGBcolor\bin\Debug\RGBcolor.exe.config
