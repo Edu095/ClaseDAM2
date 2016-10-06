@@ -9,6 +9,12 @@ import android.widget.Toast;
 
 public class BotoBuffu extends AppCompatActivity {
 
+    public void bufffu(View view){
+        Context context=getApplicationContext();
+        Toast toast= Toast.makeText(context, "Has apretat el botó!", Toast.LENGTH_LONG);
+        toast.show();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,8 +24,8 @@ public class BotoBuffu extends AppCompatActivity {
         Button boto=(Button) findViewById(R.id.buttonApreta);
 
         //Importa OnClickListener
-        boto.setOnClickListener(new View.OnClickListener() {
-            @Override
+        /*boto.setOnClickListener(new View.OnClickListener() {
+           @Override
             public void onClick(View v) {
                 //Buscar el context, cal importar la classe
                 Context context=getApplicationContext();
@@ -28,7 +34,7 @@ public class BotoBuffu extends AppCompatActivity {
                 toast.show();
             }
         });
-
+        */
 
     }
 }

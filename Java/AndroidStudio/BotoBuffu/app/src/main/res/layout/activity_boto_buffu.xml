@@ -16,6 +16,7 @@
         android:text="En aquesta aplicació veurem com s&apos;apreta un boto" />
 
     <Button
+        android:onClick="bufffu"
         android:text="Apreta!!!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
