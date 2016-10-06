@@ -13,3 +13,14 @@ C:\Users\Edu\AppData\Local\Temporary Projects\PersonalitzarText\obj\Debug\Person
 \\mac\home\Documents\Visual Studio 2015\Projects\PersonalitzarText\PersonalitzarText\obj\Debug\PersonalitzarText.exe
 \\mac\home\Documents\Visual Studio 2015\Projects\PersonalitzarText\PersonalitzarText\obj\Debug\PersonalitzarText.xml
 \\mac\home\Documents\Visual Studio 2015\Projects\PersonalitzarText\PersonalitzarText\obj\Debug\PersonalitzarText.pdb
+D:\GitHub\ClaseDAM2\VisualBasic\PersonalitzarText\PersonalitzarText\bin\Debug\PersonalitzarText.exe.config
+D:\GitHub\ClaseDAM2\VisualBasic\PersonalitzarText\PersonalitzarText\obj\Debug\PersonalitzarText.exe
+D:\GitHub\ClaseDAM2\VisualBasic\PersonalitzarText\PersonalitzarText\obj\Debug\PersonalitzarText.xml
+D:\GitHub\ClaseDAM2\VisualBasic\PersonalitzarText\PersonalitzarText\obj\Debug\PersonalitzarText.pdb
+D:\GitHub\ClaseDAM2\VisualBasic\PersonalitzarText\PersonalitzarText\bin\Debug\PersonalitzarText.exe
+D:\GitHub\ClaseDAM2\VisualBasic\PersonalitzarText\PersonalitzarText\bin\Debug\PersonalitzarText.pdb
+D:\GitHub\ClaseDAM2\VisualBasic\PersonalitzarText\PersonalitzarText\bin\Debug\PersonalitzarText.xml
+D:\GitHub\ClaseDAM2\VisualBasic\PersonalitzarText\PersonalitzarText\obj\Debug\PersonalitzarText.vbprojResolveAssemblyReference.cache
+D:\GitHub\ClaseDAM2\VisualBasic\PersonalitzarText\PersonalitzarText\obj\Debug\PersonalitzarText.Form1.resources
+D:\GitHub\ClaseDAM2\VisualBasic\PersonalitzarText\PersonalitzarText\obj\Debug\PersonalitzarText.Resources.resources
+D:\GitHub\ClaseDAM2\VisualBasic\PersonalitzarText\PersonalitzarText\obj\Debug\PersonalitzarText.vbproj.GenerateResource.Cache

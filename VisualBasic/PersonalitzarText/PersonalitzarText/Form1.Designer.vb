@@ -24,7 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.fontBox = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.siceBox = New System.Windows.Forms.ComboBox()
+        Me.sizeBox = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -33,12 +33,12 @@ Partial Class Form1
         Me.negButton = New System.Windows.Forms.CheckBox()
         Me.cursButton = New System.Windows.Forms.CheckBox()
         Me.subButton = New System.Windows.Forms.CheckBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'fontBox
         '
         Me.fontBox.FormattingEnabled = True
-        Me.fontBox.Items.AddRange(New Object() {"Arial", "Times New Roman", "Helvetica", "Comic Sans"})
         Me.fontBox.Location = New System.Drawing.Point(12, 38)
         Me.fontBox.Name = "fontBox"
         Me.fontBox.Size = New System.Drawing.Size(111, 95)
@@ -53,14 +53,14 @@ Partial Class Form1
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Font"
         '
-        'siceBox
+        'sizeBox
         '
-        Me.siceBox.FormattingEnabled = True
-        Me.siceBox.Items.AddRange(New Object() {"9", "10", "11", "12", "13", "14", "18"})
-        Me.siceBox.Location = New System.Drawing.Point(223, 89)
-        Me.siceBox.Name = "siceBox"
-        Me.siceBox.Size = New System.Drawing.Size(42, 21)
-        Me.siceBox.TabIndex = 2
+        Me.sizeBox.FormattingEnabled = True
+        Me.sizeBox.Items.AddRange(New Object() {"9", "10", "11", "12", "13", "14", "18"})
+        Me.sizeBox.Location = New System.Drawing.Point(223, 89)
+        Me.sizeBox.Name = "sizeBox"
+        Me.sizeBox.Size = New System.Drawing.Size(42, 21)
+        Me.sizeBox.TabIndex = 2
         '
         'Label2
         '
@@ -136,11 +136,21 @@ Partial Class Form1
         Me.subButton.Text = "Subrallat"
         Me.subButton.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(12, 224)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(111, 23)
+        Me.Button1.TabIndex = 14
+        Me.Button1.Text = "Agrega les Fonts"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(287, 259)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.subButton)
         Me.Controls.Add(Me.cursButton)
         Me.Controls.Add(Me.negButton)
@@ -149,7 +159,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TextBox)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.siceBox)
+        Me.Controls.Add(Me.sizeBox)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.fontBox)
         Me.Name = "Form1"
@@ -161,7 +171,7 @@ Partial Class Form1
 
     Friend WithEvents fontBox As ListBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents siceBox As ComboBox
+    Friend WithEvents sizeBox As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox As TextBox
     Friend WithEvents Label3 As Label
@@ -170,4 +180,5 @@ Partial Class Form1
     Friend WithEvents negButton As CheckBox
     Friend WithEvents cursButton As CheckBox
     Friend WithEvents subButton As CheckBox
+    Friend WithEvents Button1 As Button
 End Class
