@@ -21,6 +21,14 @@ public class Casa
 		piscina=p;
 	}
 	
+	public Casa(Casa c){
+		superficie=c.getSuperficie();
+		direccio=c.getDireccio();
+		numFinestres=c.getNumF();
+		numPlantes=c.getNumP();
+		piscina=c.getPiscina();
+	}
+	
 	public void setPiscina(Boolean p) {
 		piscina=p;
 	}
@@ -57,6 +65,10 @@ public class Casa
 		System.out.println("CORRECCIÓ Piscina: "+ c2.getPiscina());
 		System.out.println("Numero de finestres: "+ c2.getNumF());
 		System.out.println("Numero de plantes: "+ c2.getNumP());
+		
+		Casa cCop= new Casa(c);
+		System.out.println("Aixó es una copia de Casa c: "+ cCop.getDireccio());
+		
 		
 	}
 	

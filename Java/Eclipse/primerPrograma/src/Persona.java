@@ -21,6 +21,9 @@ public class Persona {
 		cosa=nom;
 		cantidad = hue;
 	}
+	Persona(Persona p1){
+		cosa=p1.getCosa();
+	}
 	
 	public static void main(String[] args){
 		//Crear Objecte
@@ -30,6 +33,8 @@ public class Persona {
 		p1.setCant(0);
 		p1.setCosa("amigo");
 		System.out.println("El problema es que tengo "+ p1.getCant()+" "+ p1.getCosa()+"s");
+		Persona p2= new Persona(p1);
+		System.out.println(p2.cosa);
 		
 	}
 }
