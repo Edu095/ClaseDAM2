@@ -1,5 +1,6 @@
 ﻿Imports System.Drawing.Text
 Public Class Form1
+
     Private Sub Button_Click(sender As Object, e As EventArgs) Handles Button.Click
         Dim font As String = fontBox.SelectedItem
         Dim size As Integer = 12
@@ -41,15 +42,7 @@ Public Class Form1
     End Sub
 
     Private Sub VerAyudaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerAyudaToolStripMenuItem.Click
-        MsgBox("Per a poder utilitzar correctament el programa al menu *Archivo* seleccionem *Agregar Fuentes...* per poder utilitzar totes les fonts disponibles.")
-    End Sub
-
-    Private Sub AgregarFuentesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarFuentesToolStripMenuItem.Click
-        Dim fonts As New InstalledFontCollection
-
-        For Each one As FontFamily In fonts.Families
-            fontBox.Items.Add(one.Name)
-        Next
+        MsgBox("Si necesites ajuda per utilitzar aquest programa es que tens problemes cerebrals greus. Jo que tu acudirie a un metje/psicoleg.")
     End Sub
 
     Private Sub rBar_ValueChanged(sender As Object, e As EventArgs) Handles rBar.ValueChanged, gBar.ValueChanged, bBar.ValueChanged
@@ -72,5 +65,13 @@ Public Class Form1
         bBar.Value = NumericUpDown3.Value
         Panel1.BackColor = Color.FromArgb(rBar.Value, gBar.Value, bBar.Value)
         TextBox.ForeColor = Color.FromArgb(rBar.Value, gBar.Value, bBar.Value)
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim fonts As New InstalledFontCollection
+
+        For Each one As FontFamily In fonts.Families
+            fontBox.Items.Add(one.Name)
+        Next
     End Sub
 End Class

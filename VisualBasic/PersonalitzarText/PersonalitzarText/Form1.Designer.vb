@@ -35,7 +35,6 @@ Partial Class Form1
         Me.subButton = New System.Windows.Forms.CheckBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AgregarFuentesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VerAyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -171,21 +170,15 @@ Partial Class Form1
         '
         'ArchivoToolStripMenuItem
         '
-        Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarFuentesToolStripMenuItem, Me.SalirToolStripMenuItem})
+        Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalirToolStripMenuItem})
         Me.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem"
         Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
         Me.ArchivoToolStripMenuItem.Text = "Archivo"
         '
-        'AgregarFuentesToolStripMenuItem
-        '
-        Me.AgregarFuentesToolStripMenuItem.Name = "AgregarFuentesToolStripMenuItem"
-        Me.AgregarFuentesToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
-        Me.AgregarFuentesToolStripMenuItem.Text = "Agregar Fuentes..."
-        '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'AyudaToolStripMenuItem
@@ -362,7 +355,6 @@ Partial Class Form1
     Friend WithEvents AyudaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VerAyudaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AcercaDeForm1ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AgregarFuentesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents rBar As TrackBar
