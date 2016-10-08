@@ -7,4 +7,4 @@ Per a que pugueu accedir a tot el material us recomano instalar l'aplpicació d'
 
 Un cop descarregada l'aplicació, si voleu contribuïr amb projectes vostres o modificacions podeu crear noves rames per així comparar el codi facilment i així el puga agregar al principar.
 
-![GitHub Screenshot](http://i.imgur.com/oojdc1H.png)
+                                  ![GitHub Screenshot](http://i.imgur.com/oojdc1H.png)
