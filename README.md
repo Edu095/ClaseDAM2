@@ -8,5 +8,5 @@ Per a que pugueu accedir a tot el material us recomano instalar l'aplpicació d'
 #### Us recomano pasar per aquesta petita guia per una millor experiencia. [GUIA/TUTORIAL](https://github.com/Edu095/ClaseDAM2/blob/master/tutorial.rst)
 
 ## Horari de Clase
-
+![Horari DAM 2](http://imgur.com/a/uIiNU)
 
