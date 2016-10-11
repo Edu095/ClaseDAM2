@@ -5,6 +5,8 @@ Per a que pugueu accedir a tot el material us recomano instalar l'aplpicació d'
 
 ![GitHub Screenshot](http://i.imgur.com/GuPuEsd.png)
 
-### Us recomano pasar per aquesta petita guia per una millor experiencia. [GUIA/TUTORIAL](https://github.com/Edu095/ClaseDAM2/blob/master/tutorial.rst)
+#### Us recomano pasar per aquesta petita guia per una millor experiencia. [GUIA/TUTORIAL](https://github.com/Edu095/ClaseDAM2/blob/master/tutorial.rst)
 
 ## Horari de Clase
+
+
