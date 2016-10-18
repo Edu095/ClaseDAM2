@@ -26,7 +26,21 @@ Public Class Form1
 
     End Sub
 
+    Private Sub Poli_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Poli.KeyPress, ResulNeg.KeyPress, ResulPos.KeyPress
+        e.Handled = True
+    End Sub
+
     Private Sub VarA_KeyPress(sender As Object, e As KeyPressEventArgs) Handles VarA.KeyPress, VarB.KeyPress, VarC.KeyPress
+        Dim com As Boolean = False
+        If InStr(1, "0123456789,-" & Chr(8), e.KeyChar) = 0 Then
+            e.Handled = True
+        Else
+
+            If cont > 0 Then
+                e.Handled = True
+            End If
+        End If
 
     End Sub
+
 End Class
