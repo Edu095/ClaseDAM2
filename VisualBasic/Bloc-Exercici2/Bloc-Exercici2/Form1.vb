@@ -25,4 +25,8 @@ Public Class Form1
         End If
 
     End Sub
+
+    Private Sub VarA_KeyPress(sender As Object, e As KeyPressEventArgs) Handles VarA.KeyPress, VarB.KeyPress, VarC.KeyPress
+
+    End Sub
 End Class
