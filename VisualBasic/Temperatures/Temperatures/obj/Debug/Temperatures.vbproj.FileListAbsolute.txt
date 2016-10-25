@@ -1,1 +1,12 @@
 Z:\Desktop\Temperatures\Temperatures\bin\Debug\Temperatures.exe.config
+D:\GitHub\ClaseDAM2\VisualBasic\Temperatures\Temperatures\bin\Debug\Temperatures.exe.config
+D:\GitHub\ClaseDAM2\VisualBasic\Temperatures\Temperatures\bin\Debug\Temperatures.exe
+D:\GitHub\ClaseDAM2\VisualBasic\Temperatures\Temperatures\bin\Debug\Temperatures.pdb
+D:\GitHub\ClaseDAM2\VisualBasic\Temperatures\Temperatures\bin\Debug\Temperatures.xml
+D:\GitHub\ClaseDAM2\VisualBasic\Temperatures\Temperatures\obj\Debug\Temperatures.vbprojResolveAssemblyReference.cache
+D:\GitHub\ClaseDAM2\VisualBasic\Temperatures\Temperatures\obj\Debug\WindowsApplication1.Form1.resources
+D:\GitHub\ClaseDAM2\VisualBasic\Temperatures\Temperatures\obj\Debug\WindowsApplication1.Resources.resources
+D:\GitHub\ClaseDAM2\VisualBasic\Temperatures\Temperatures\obj\Debug\Temperatures.vbproj.GenerateResource.Cache
+D:\GitHub\ClaseDAM2\VisualBasic\Temperatures\Temperatures\obj\Debug\Temperatures.exe
+D:\GitHub\ClaseDAM2\VisualBasic\Temperatures\Temperatures\obj\Debug\Temperatures.xml
+D:\GitHub\ClaseDAM2\VisualBasic\Temperatures\Temperatures\obj\Debug\Temperatures.pdb

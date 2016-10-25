@@ -37,14 +37,45 @@
                 gF.Text = "0"
             End If
             vf = CDec(gF.Text)
-            gC.Text = Str((vf - 32) / 1.8)
+            If vf > 122 Then vf = 122
+            If vf < -58 Then vf = -58
+            vc = (vf - 32) / 1.8
+            gC.Text = Format(vc, "###0.00")
+            gF.Text = Format(vf, "###0.00")
         End If
     End Sub
 
-    Private Sub HScrollBarF_Scroll(sender As Object, e As ScrollEventArgs) Handles HScrollBarF.Scroll, HScrollBarC.Scroll
-        gF.Text = Str(HScrollBarF.Value)
-        gC.Text = Str(HScrollBarC.Value)
+    Private Sub gC_KeyPress(sender As Object, e As KeyPressEventArgs) Handles gC.KeyPress
+        If e.KeyChar = vbCr Then
+            If gC.Text = "" Then
+                gC.Text = "32"
+            End If
+            vc = CDec(gC.Text)
+            If vc > 50 Then vc = 50
+            If vc < -50 Then vc = -50
+            vf = (vc * 1.8) + 32
+            gC.Text = Format(vc, "###0.00")
+            gF.Text = Format(vf, "###0.00")
+        End If
     End Sub
+
+    Private Sub HScrollBarF_Scroll(sender As Object, e As ScrollEventArgs) Handles HScrollBarF.Scroll
+        vf = CDec(HScrollBarF.Value)
+        vc = (vf - 32) / 1.8
+        HScrollBarC.Value = vc
+        gC.Text = Format(vc, "###0.00")
+        gF.Text = Format(vf, "###0.00")
+
+    End Sub
+
+    Private Sub HScrollBarC_Scroll(sender As Object, e As ScrollEventArgs) Handles HScrollBarC.Scroll
+        vc = CDec(HScrollBarC.Value)
+        vf = (vc * 1.8) + 32
+        HScrollBarF.Value = vf
+        gC.Text = Format(vc, "###0.00")
+        gF.Text = Format(vf, "###0.00")
+    End Sub
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()

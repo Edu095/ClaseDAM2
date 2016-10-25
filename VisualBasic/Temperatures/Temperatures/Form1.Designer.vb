@@ -45,7 +45,7 @@ Partial Class Form1
         '
         Me.HScrollBarC.Enabled = False
         Me.HScrollBarC.Location = New System.Drawing.Point(119, 39)
-        Me.HScrollBarC.Maximum = 50
+        Me.HScrollBarC.Maximum = 59
         Me.HScrollBarC.Minimum = -50
         Me.HScrollBarC.Name = "HScrollBarC"
         Me.HScrollBarC.Size = New System.Drawing.Size(273, 18)
@@ -131,7 +131,7 @@ Partial Class Form1
         '
         Me.HScrollBarF.Enabled = False
         Me.HScrollBarF.Location = New System.Drawing.Point(119, 194)
-        Me.HScrollBarF.Maximum = 122
+        Me.HScrollBarF.Maximum = 131
         Me.HScrollBarF.Minimum = -58
         Me.HScrollBarF.Name = "HScrollBarF"
         Me.HScrollBarF.Size = New System.Drawing.Size(273, 18)
