@@ -31,12 +31,28 @@ Public Class Form1
     End Sub
 
     Private Sub VarA_KeyPress(sender As Object, e As KeyPressEventArgs) Handles VarA.KeyPress, VarB.KeyPress, VarC.KeyPress
+        Dim h, p As Integer
+        Dim cadena As String
         Dim com As Boolean = False
-        If InStr(1, "0123456789,-" & Chr(8), e.KeyChar) = 0 Then
-            e.Handled = True
-        Else
 
-            If cont > 0 Then
+        cadena = VarA.Text
+        h = Len(VarA.Text)
+
+        For p = 1 To h
+            If Mid(cadena, p, 1) = "." Then
+                com = True
+                Exit For
+            Else
+                com = False
+            End If
+        Next p
+
+        If com = True Then
+            If InStr(1, "0123456789-" & Chr(8), e.KeyChar) = 0 Then
+                e.Handled = True
+            End If
+        Else
+            If InStr(1, "0123456789.-" & Chr(8), e.KeyChar) = 0 Then
                 e.Handled = True
             End If
         End If

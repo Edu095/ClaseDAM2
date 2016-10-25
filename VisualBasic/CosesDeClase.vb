@@ -11,7 +11,10 @@
         b += 1
         Module1.n += 1
 
-        Form2.Show()
+        Dim resul = MessageBox.Show("Hola pepito", "Chachi", MessageBoxButtons.YesNo, MessageBoxIcon.Hand)
+        If (resul = DialogResult.Yes) Then
+            Form2.Show()
+        End If
 
     End Sub
 
