@@ -1,1 +1,12 @@
 \\mac\home\Documents\Visual Studio 2015\Projects\ComboBox_Mesos\ComboBox_Mesos\bin\Debug\ComboBox_Mesos.exe.config
+D:\GitHub\ClaseDAM2\VisualBasic\ComboBox_Mesos\ComboBox_Mesos\bin\Debug\ComboBox_Mesos.exe.config
+D:\GitHub\ClaseDAM2\VisualBasic\ComboBox_Mesos\ComboBox_Mesos\bin\Debug\ComboBox_Mesos.exe
+D:\GitHub\ClaseDAM2\VisualBasic\ComboBox_Mesos\ComboBox_Mesos\bin\Debug\ComboBox_Mesos.pdb
+D:\GitHub\ClaseDAM2\VisualBasic\ComboBox_Mesos\ComboBox_Mesos\bin\Debug\ComboBox_Mesos.xml
+D:\GitHub\ClaseDAM2\VisualBasic\ComboBox_Mesos\ComboBox_Mesos\obj\Debug\ComboBox_Mesos.vbprojResolveAssemblyReference.cache
+D:\GitHub\ClaseDAM2\VisualBasic\ComboBox_Mesos\ComboBox_Mesos\obj\Debug\WindowsApplication1.Form1.resources
+D:\GitHub\ClaseDAM2\VisualBasic\ComboBox_Mesos\ComboBox_Mesos\obj\Debug\WindowsApplication1.Resources.resources
+D:\GitHub\ClaseDAM2\VisualBasic\ComboBox_Mesos\ComboBox_Mesos\obj\Debug\ComboBox_Mesos.vbproj.GenerateResource.Cache
+D:\GitHub\ClaseDAM2\VisualBasic\ComboBox_Mesos\ComboBox_Mesos\obj\Debug\ComboBox_Mesos.exe
+D:\GitHub\ClaseDAM2\VisualBasic\ComboBox_Mesos\ComboBox_Mesos\obj\Debug\ComboBox_Mesos.xml
+D:\GitHub\ClaseDAM2\VisualBasic\ComboBox_Mesos\ComboBox_Mesos\obj\Debug\ComboBox_Mesos.pdb
