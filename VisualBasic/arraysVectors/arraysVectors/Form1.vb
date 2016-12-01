@@ -17,6 +17,14 @@
             alum = InputBox("Alumne " + Str(i))
             TextBox1.Text += alum & vbCrLf
         Next
+        Dim ctrl As Control
+        For Each ctrl In Controls
+            TextBox1.Text += ctrl.Name & vbCrLf
+        Next
 
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Form2.Show()
     End Sub
 End Class
