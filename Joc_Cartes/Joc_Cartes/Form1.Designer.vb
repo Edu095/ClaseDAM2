@@ -23,16 +23,19 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.JocToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AjudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NouJocToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SurtirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AjudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ImageList1
@@ -46,7 +49,7 @@ Partial Class Form1
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.JocToolStripMenuItem, Me.AjudaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(522, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(647, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -57,6 +60,18 @@ Partial Class Form1
         Me.JocToolStripMenuItem.Size = New System.Drawing.Size(36, 20)
         Me.JocToolStripMenuItem.Text = "Joc"
         '
+        'NouJocToolStripMenuItem
+        '
+        Me.NouJocToolStripMenuItem.Name = "NouJocToolStripMenuItem"
+        Me.NouJocToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.NouJocToolStripMenuItem.Text = "Nou joc"
+        '
+        'SurtirToolStripMenuItem
+        '
+        Me.SurtirToolStripMenuItem.Name = "SurtirToolStripMenuItem"
+        Me.SurtirToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.SurtirToolStripMenuItem.Text = "Surtir"
+        '
         'AjudaToolStripMenuItem
         '
         Me.AjudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
@@ -64,55 +79,58 @@ Partial Class Form1
         Me.AjudaToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
         Me.AjudaToolStripMenuItem.Text = "Ajuda"
         '
-        'NouJocToolStripMenuItem
-        '
-        Me.NouJocToolStripMenuItem.Name = "NouJocToolStripMenuItem"
-        Me.NouJocToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.NouJocToolStripMenuItem.Text = "Nou joc"
-        '
-        'SurtirToolStripMenuItem
-        '
-        Me.SurtirToolStripMenuItem.Name = "SurtirToolStripMenuItem"
-        Me.SurtirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.SurtirToolStripMenuItem.Text = "Surtir"
-        '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(183, 218)
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.Location = New System.Drawing.Point(430, 223)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(144, 50)
+        Me.Button1.Size = New System.Drawing.Size(144, 53)
         Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Jugar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(201, 290)
+        Me.Button2.Image = Global.Joc_Cartes.My.Resources.Resources.botoConfig1
+        Me.Button2.Location = New System.Drawing.Point(444, 291)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(109, 31)
+        Me.Button2.Size = New System.Drawing.Size(117, 31)
         Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Configuració"
         Me.Button2.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = Global.Joc_Cartes.My.Resources.Resources.cooltext218961437572305
+        Me.PictureBox1.Image = Global.Joc_Cartes.My.Resources.Resources.cooltext218961437572305
+        Me.PictureBox1.Location = New System.Drawing.Point(30, 106)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(544, 96)
+        Me.PictureBox1.TabIndex = 4
+        Me.PictureBox1.TabStop = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(522, 412)
+        Me.BackgroundImage = Global.Joc_Cartes.My.Resources.Resources.book1
+        Me.ClientSize = New System.Drawing.Size(647, 363)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Joc de memoria"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -126,4 +144,5 @@ Partial Class Form1
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
