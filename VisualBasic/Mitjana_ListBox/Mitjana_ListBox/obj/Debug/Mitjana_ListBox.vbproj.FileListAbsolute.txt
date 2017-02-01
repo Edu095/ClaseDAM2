@@ -1,1 +1,2 @@
 \\mac\home\Documents\Visual Studio 2015\Projects\Mitjana_ListBox\Mitjana_ListBox\bin\Debug\Mitjana_ListBox.exe.config
+D:\GitHub\ClaseDAM2\VisualBasic\Mitjana_ListBox\Mitjana_ListBox\bin\Debug\Mitjana_ListBox.exe.config

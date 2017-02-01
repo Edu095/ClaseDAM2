@@ -1,1 +1,2 @@
 \\mac\home\Documents\Visual Studio 2015\Projects\ComboBox_DataSelect\ComboBox_DataSelect\bin\Debug\ComboBox_DataSelect.exe.config
+D:\GitHub\ClaseDAM2\VisualBasic\ComboBox_DataSelect\ComboBox_DataSelect\bin\Debug\ComboBox_DataSelect.exe.config
