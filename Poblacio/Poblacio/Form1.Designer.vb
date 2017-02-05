@@ -25,18 +25,20 @@ Partial Class Form1
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton6 = New System.Windows.Forms.RadioButton()
         Me.RadioButton5 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton6 = New System.Windows.Forms.RadioButton()
+        Me.LabelProvincies = New System.Windows.Forms.Label()
+        Me.LabelMunicipi = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -48,7 +50,7 @@ Partial Class Form1
         '
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(29, 37)
+        Me.ComboBox1.Location = New System.Drawing.Point(29, 70)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 228)
         Me.ComboBox1.TabIndex = 0
@@ -57,7 +59,7 @@ Partial Class Form1
         '
         Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(177, 37)
+        Me.ComboBox2.Location = New System.Drawing.Point(174, 70)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(121, 228)
         Me.ComboBox2.TabIndex = 1
@@ -74,16 +76,16 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
         '
-        'RadioButton1
+        'RadioButton3
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(7, 30)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(90, 17)
-        Me.RadioButton1.TabIndex = 0
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "RadioButton1"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Location = New System.Drawing.Point(7, 82)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(90, 17)
+        Me.RadioButton3.TabIndex = 2
+        Me.RadioButton3.TabStop = True
+        Me.RadioButton3.Text = "RadioButton3"
+        Me.RadioButton3.UseVisualStyleBackColor = True
         '
         'RadioButton2
         '
@@ -96,16 +98,16 @@ Partial Class Form1
         Me.RadioButton2.Text = "RadioButton2"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
-        'RadioButton3
+        'RadioButton1
         '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(7, 82)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(90, 17)
-        Me.RadioButton3.TabIndex = 2
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "RadioButton3"
-        Me.RadioButton3.UseVisualStyleBackColor = True
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(7, 30)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(90, 17)
+        Me.RadioButton1.TabIndex = 0
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "RadioButton1"
+        Me.RadioButton1.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
@@ -119,16 +121,16 @@ Partial Class Form1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "GroupBox2"
         '
-        'RadioButton4
+        'RadioButton6
         '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(0, 30)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(90, 17)
-        Me.RadioButton4.TabIndex = 0
-        Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "RadioButton4"
-        Me.RadioButton4.UseVisualStyleBackColor = True
+        Me.RadioButton6.AutoSize = True
+        Me.RadioButton6.Location = New System.Drawing.Point(0, 103)
+        Me.RadioButton6.Name = "RadioButton6"
+        Me.RadioButton6.Size = New System.Drawing.Size(90, 17)
+        Me.RadioButton6.TabIndex = 2
+        Me.RadioButton6.TabStop = True
+        Me.RadioButton6.Text = "RadioButton6"
+        Me.RadioButton6.UseVisualStyleBackColor = True
         '
         'RadioButton5
         '
@@ -141,6 +143,17 @@ Partial Class Form1
         Me.RadioButton5.Text = "RadioButton5"
         Me.RadioButton5.UseVisualStyleBackColor = True
         '
+        'RadioButton4
+        '
+        Me.RadioButton4.AutoSize = True
+        Me.RadioButton4.Location = New System.Drawing.Point(0, 30)
+        Me.RadioButton4.Name = "RadioButton4"
+        Me.RadioButton4.Size = New System.Drawing.Size(90, 17)
+        Me.RadioButton4.TabIndex = 0
+        Me.RadioButton4.TabStop = True
+        Me.RadioButton4.Text = "RadioButton4"
+        Me.RadioButton4.UseVisualStyleBackColor = True
+        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(239, 294)
@@ -152,7 +165,7 @@ Partial Class Form1
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(41, 395)
+        Me.TextBox1.Location = New System.Drawing.Point(41, 372)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 5
@@ -168,7 +181,7 @@ Partial Class Form1
         Me.GroupBox3.Size = New System.Drawing.Size(320, 337)
         Me.GroupBox3.TabIndex = 6
         Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "GroupBox3"
+        Me.GroupBox3.Text = "Cerca"
         '
         'NumericUpDown1
         '
@@ -179,6 +192,8 @@ Partial Class Form1
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.LabelMunicipi)
+        Me.GroupBox4.Controls.Add(Me.LabelProvincies)
         Me.GroupBox4.Controls.Add(Me.ComboBox1)
         Me.GroupBox4.Controls.Add(Me.ComboBox2)
         Me.GroupBox4.Location = New System.Drawing.Point(12, 28)
@@ -188,16 +203,23 @@ Partial Class Form1
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "GroupBox4"
         '
-        'RadioButton6
+        'LabelProvincies
         '
-        Me.RadioButton6.AutoSize = True
-        Me.RadioButton6.Location = New System.Drawing.Point(0, 103)
-        Me.RadioButton6.Name = "RadioButton6"
-        Me.RadioButton6.Size = New System.Drawing.Size(90, 17)
-        Me.RadioButton6.TabIndex = 2
-        Me.RadioButton6.TabStop = True
-        Me.RadioButton6.Text = "RadioButton6"
-        Me.RadioButton6.UseVisualStyleBackColor = True
+        Me.LabelProvincies.AutoSize = True
+        Me.LabelProvincies.Location = New System.Drawing.Point(26, 37)
+        Me.LabelProvincies.Name = "LabelProvincies"
+        Me.LabelProvincies.Size = New System.Drawing.Size(56, 13)
+        Me.LabelProvincies.TabIndex = 2
+        Me.LabelProvincies.Text = "Provincies"
+        '
+        'LabelMunicipi
+        '
+        Me.LabelMunicipi.AutoSize = True
+        Me.LabelMunicipi.Location = New System.Drawing.Point(174, 36)
+        Me.LabelMunicipi.Name = "LabelMunicipi"
+        Me.LabelMunicipi.Size = New System.Drawing.Size(51, 13)
+        Me.LabelMunicipi.TabIndex = 3
+        Me.LabelMunicipi.Text = "Municipis"
         '
         'Form1
         '
@@ -216,6 +238,7 @@ Partial Class Form1
         Me.GroupBox3.ResumeLayout(False)
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -236,4 +259,6 @@ Partial Class Form1
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents LabelMunicipi As Label
+    Friend WithEvents LabelProvincies As Label
 End Class
