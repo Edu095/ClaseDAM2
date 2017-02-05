@@ -139,6 +139,7 @@ Partial Class Form2
         Me.PictureBox24.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox24.TabIndex = 51
         Me.PictureBox24.TabStop = False
+        Me.PictureBox24.Tag = "23"
         '
         'PictureBox23
         '
@@ -148,6 +149,7 @@ Partial Class Form2
         Me.PictureBox23.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox23.TabIndex = 50
         Me.PictureBox23.TabStop = False
+        Me.PictureBox23.Tag = "17"
         '
         'PictureBox22
         '
@@ -157,6 +159,7 @@ Partial Class Form2
         Me.PictureBox22.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox22.TabIndex = 49
         Me.PictureBox22.TabStop = False
+        Me.PictureBox22.Tag = "16"
         '
         'PictureBox21
         '
@@ -166,6 +169,7 @@ Partial Class Form2
         Me.PictureBox21.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox21.TabIndex = 48
         Me.PictureBox21.TabStop = False
+        Me.PictureBox21.Tag = "15"
         '
         'PictureBox20
         '
@@ -175,6 +179,7 @@ Partial Class Form2
         Me.PictureBox20.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox20.TabIndex = 47
         Me.PictureBox20.TabStop = False
+        Me.PictureBox20.Tag = "22"
         '
         'PictureBox19
         '
@@ -184,6 +189,7 @@ Partial Class Form2
         Me.PictureBox19.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox19.TabIndex = 46
         Me.PictureBox19.TabStop = False
+        Me.PictureBox19.Tag = "14"
         '
         'PictureBox18
         '
@@ -193,6 +199,7 @@ Partial Class Form2
         Me.PictureBox18.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox18.TabIndex = 45
         Me.PictureBox18.TabStop = False
+        Me.PictureBox18.Tag = "9"
         '
         'PictureBox17
         '
@@ -202,6 +209,7 @@ Partial Class Form2
         Me.PictureBox17.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox17.TabIndex = 44
         Me.PictureBox17.TabStop = False
+        Me.PictureBox17.Tag = "8"
         '
         'PictureBox16
         '
@@ -211,6 +219,7 @@ Partial Class Form2
         Me.PictureBox16.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox16.TabIndex = 43
         Me.PictureBox16.TabStop = False
+        Me.PictureBox16.Tag = "21"
         '
         'PictureBox15
         '
@@ -220,6 +229,7 @@ Partial Class Form2
         Me.PictureBox15.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox15.TabIndex = 42
         Me.PictureBox15.TabStop = False
+        Me.PictureBox15.Tag = "13"
         '
         'PictureBox14
         '
@@ -229,6 +239,7 @@ Partial Class Form2
         Me.PictureBox14.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox14.TabIndex = 41
         Me.PictureBox14.TabStop = False
+        Me.PictureBox14.Tag = "7"
         '
         'PictureBox13
         '
@@ -238,6 +249,7 @@ Partial Class Form2
         Me.PictureBox13.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox13.TabIndex = 40
         Me.PictureBox13.TabStop = False
+        Me.PictureBox13.Tag = "3"
         '
         'PictureBox12
         '
@@ -247,6 +259,7 @@ Partial Class Form2
         Me.PictureBox12.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox12.TabIndex = 39
         Me.PictureBox12.TabStop = False
+        Me.PictureBox12.Tag = "20"
         '
         'PictureBox11
         '
@@ -256,6 +269,7 @@ Partial Class Form2
         Me.PictureBox11.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox11.TabIndex = 38
         Me.PictureBox11.TabStop = False
+        Me.PictureBox11.Tag = "12"
         '
         'PictureBox10
         '
@@ -265,6 +279,7 @@ Partial Class Form2
         Me.PictureBox10.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox10.TabIndex = 37
         Me.PictureBox10.TabStop = False
+        Me.PictureBox10.Tag = "6"
         '
         'PictureBox9
         '
@@ -274,6 +289,7 @@ Partial Class Form2
         Me.PictureBox9.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox9.TabIndex = 36
         Me.PictureBox9.TabStop = False
+        Me.PictureBox9.Tag = "2"
         '
         'PictureBox8
         '
@@ -283,6 +299,7 @@ Partial Class Form2
         Me.PictureBox8.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox8.TabIndex = 35
         Me.PictureBox8.TabStop = False
+        Me.PictureBox8.Tag = "19"
         '
         'PictureBox7
         '
@@ -292,6 +309,7 @@ Partial Class Form2
         Me.PictureBox7.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox7.TabIndex = 34
         Me.PictureBox7.TabStop = False
+        Me.PictureBox7.Tag = "11"
         '
         'PictureBox6
         '
@@ -301,6 +319,7 @@ Partial Class Form2
         Me.PictureBox6.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox6.TabIndex = 33
         Me.PictureBox6.TabStop = False
+        Me.PictureBox6.Tag = "5"
         '
         'PictureBox5
         '
@@ -310,6 +329,7 @@ Partial Class Form2
         Me.PictureBox5.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox5.TabIndex = 32
         Me.PictureBox5.TabStop = False
+        Me.PictureBox5.Tag = "1"
         '
         'PictureBox4
         '
@@ -319,6 +339,7 @@ Partial Class Form2
         Me.PictureBox4.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox4.TabIndex = 31
         Me.PictureBox4.TabStop = False
+        Me.PictureBox4.Tag = "18"
         '
         'PictureBox3
         '
@@ -328,6 +349,7 @@ Partial Class Form2
         Me.PictureBox3.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox3.TabIndex = 30
         Me.PictureBox3.TabStop = False
+        Me.PictureBox3.Tag = "10"
         '
         'PictureBox2
         '
@@ -337,6 +359,7 @@ Partial Class Form2
         Me.PictureBox2.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox2.TabIndex = 29
         Me.PictureBox2.TabStop = False
+        Me.PictureBox2.Tag = "4"
         '
         'PictureBox1
         '
@@ -346,6 +369,7 @@ Partial Class Form2
         Me.PictureBox1.Size = New System.Drawing.Size(115, 150)
         Me.PictureBox1.TabIndex = 28
         Me.PictureBox1.TabStop = False
+        Me.PictureBox1.Tag = "0"
         '
         'ImageListHS
         '

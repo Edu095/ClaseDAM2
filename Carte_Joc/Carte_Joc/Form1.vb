@@ -20,6 +20,6 @@
     End Sub
 
     Private Sub NouJocToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NouJocToolStripMenuItem.Click
-        lvl = 1
+
     End Sub
 End Class
