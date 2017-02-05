@@ -34,12 +34,14 @@ Partial Class Form3
         '
         'ButtonSave
         '
+        Me.ButtonSave.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.ButtonSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.ButtonSave.Location = New System.Drawing.Point(138, 12)
         Me.ButtonSave.Name = "ButtonSave"
-        Me.ButtonSave.Size = New System.Drawing.Size(75, 231)
+        Me.ButtonSave.Size = New System.Drawing.Size(87, 231)
         Me.ButtonSave.TabIndex = 0
         Me.ButtonSave.Text = "Guardar"
-        Me.ButtonSave.UseVisualStyleBackColor = True
+        Me.ButtonSave.UseVisualStyleBackColor = False
         '
         'ImageList1
         '
@@ -80,7 +82,8 @@ Partial Class Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(227, 257)
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ClientSize = New System.Drawing.Size(234, 257)
         Me.ControlBox = False
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label3)

@@ -57,6 +57,8 @@ Partial Class Form2
         Me.ImageListPokemon = New System.Windows.Forms.ImageList(Me.components)
         Me.ImageListPortal = New System.Windows.Forms.ImageList(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.LabelLvL = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -82,6 +84,7 @@ Partial Class Form2
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -91,7 +94,7 @@ Partial Class Form2
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(157, 100)
+        Me.GroupBox1.Size = New System.Drawing.Size(157, 85)
         Me.GroupBox1.TabIndex = 27
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Temps"
@@ -103,7 +106,7 @@ Partial Class Form2
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelTimer.AutoSize = True
         Me.LabelTimer.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.LabelTimer.Location = New System.Drawing.Point(53, 49)
+        Me.LabelTimer.Location = New System.Drawing.Point(65, 41)
         Me.LabelTimer.Name = "LabelTimer"
         Me.LabelTimer.Size = New System.Drawing.Size(24, 26)
         Me.LabelTimer.TabIndex = 25
@@ -112,7 +115,7 @@ Partial Class Form2
         '
         'ButtonStart
         '
-        Me.ButtonStart.Location = New System.Drawing.Point(12, 125)
+        Me.ButtonStart.Location = New System.Drawing.Point(12, 214)
         Me.ButtonStart.Name = "ButtonStart"
         Me.ButtonStart.Size = New System.Drawing.Size(156, 54)
         Me.ButtonStart.TabIndex = 52
@@ -121,7 +124,7 @@ Partial Class Form2
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(54, 189)
+        Me.Button2.Location = New System.Drawing.Point(54, 278)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 53
@@ -371,12 +374,39 @@ Partial Class Form2
         'Timer1
         '
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox2.Controls.Add(Me.LabelLvL)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(11, 103)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(157, 85)
+        Me.GroupBox2.TabIndex = 28
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Nivell"
+        '
+        'LabelLvL
+        '
+        Me.LabelLvL.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LabelLvL.AutoSize = True
+        Me.LabelLvL.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
+        Me.LabelLvL.Location = New System.Drawing.Point(66, 42)
+        Me.LabelLvL.Name = "LabelLvL"
+        Me.LabelLvL.Size = New System.Drawing.Size(24, 26)
+        Me.LabelLvL.TabIndex = 25
+        Me.LabelLvL.Text = "0"
+        Me.LabelLvL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Carte_Joc.My.Resources.Resources.hs
-        Me.ClientSize = New System.Drawing.Size(895, 634)
+        Me.ClientSize = New System.Drawing.Size(909, 637)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ButtonStart)
         Me.Controls.Add(Me.PictureBox24)
@@ -433,6 +463,8 @@ Partial Class Form2
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -470,4 +502,6 @@ Partial Class Form2
     Friend WithEvents ImageListPokemon As ImageList
     Friend WithEvents ImageListPortal As ImageList
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents LabelLvL As Label
 End Class

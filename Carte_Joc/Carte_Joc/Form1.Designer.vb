@@ -57,13 +57,13 @@ Partial Class Form1
         'NouJocToolStripMenuItem
         '
         Me.NouJocToolStripMenuItem.Name = "NouJocToolStripMenuItem"
-        Me.NouJocToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.NouJocToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.NouJocToolStripMenuItem.Text = "Nou joc"
         '
         'SurtirToolStripMenuItem
         '
         Me.SurtirToolStripMenuItem.Name = "SurtirToolStripMenuItem"
-        Me.SurtirToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.SurtirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SurtirToolStripMenuItem.Text = "Surtir"
         '
         'AjudaToolStripMenuItem
