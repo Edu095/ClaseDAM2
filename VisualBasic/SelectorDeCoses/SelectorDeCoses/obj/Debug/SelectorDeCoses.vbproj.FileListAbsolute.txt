@@ -1,1 +1,2 @@
 \\mac\home\Documents\Visual Studio 2015\Projects\SelectorDeCoses\SelectorDeCoses\bin\Debug\SelectorDeCoses.exe.config
+Y:\VisualBasic\SelectorDeCoses\SelectorDeCoses\bin\Debug\SelectorDeCoses.exe.config

@@ -1,6 +1,8 @@
 ﻿Public Class Form3
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ButtonSave.Click
+        bgCarta = ListBox1.SelectedIndex
         Me.Visible = False
+
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged

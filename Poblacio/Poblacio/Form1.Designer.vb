@@ -37,13 +37,17 @@ Partial Class Form1
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.LabelProvincies = New System.Windows.Forms.Label()
         Me.LabelMunicipi = New System.Windows.Forms.Label()
+        Me.LabelProvincies = New System.Windows.Forms.Label()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ArxiuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ImportarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ComboBox1
@@ -203,15 +207,6 @@ Partial Class Form1
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "GroupBox4"
         '
-        'LabelProvincies
-        '
-        Me.LabelProvincies.AutoSize = True
-        Me.LabelProvincies.Location = New System.Drawing.Point(26, 37)
-        Me.LabelProvincies.Name = "LabelProvincies"
-        Me.LabelProvincies.Size = New System.Drawing.Size(56, 13)
-        Me.LabelProvincies.TabIndex = 2
-        Me.LabelProvincies.Text = "Provincies"
-        '
         'LabelMunicipi
         '
         Me.LabelMunicipi.AutoSize = True
@@ -221,6 +216,37 @@ Partial Class Form1
         Me.LabelMunicipi.TabIndex = 3
         Me.LabelMunicipi.Text = "Municipis"
         '
+        'LabelProvincies
+        '
+        Me.LabelProvincies.AutoSize = True
+        Me.LabelProvincies.Location = New System.Drawing.Point(26, 37)
+        Me.LabelProvincies.Name = "LabelProvincies"
+        Me.LabelProvincies.Size = New System.Drawing.Size(56, 13)
+        Me.LabelProvincies.TabIndex = 2
+        Me.LabelProvincies.Text = "Provincies"
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArxiuToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(803, 24)
+        Me.MenuStrip1.TabIndex = 8
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ArxiuToolStripMenuItem
+        '
+        Me.ArxiuToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImportarToolStripMenuItem})
+        Me.ArxiuToolStripMenuItem.Name = "ArxiuToolStripMenuItem"
+        Me.ArxiuToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
+        Me.ArxiuToolStripMenuItem.Text = "Arxiu"
+        '
+        'ImportarToolStripMenuItem
+        '
+        Me.ImportarToolStripMenuItem.Name = "ImportarToolStripMenuItem"
+        Me.ImportarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ImportarToolStripMenuItem.Text = "Importar..."
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -229,6 +255,8 @@ Partial Class Form1
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.GroupBox1.ResumeLayout(False)
@@ -239,6 +267,8 @@ Partial Class Form1
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -261,4 +291,7 @@ Partial Class Form1
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents LabelMunicipi As Label
     Friend WithEvents LabelProvincies As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents ArxiuToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ImportarToolStripMenuItem As ToolStripMenuItem
 End Class

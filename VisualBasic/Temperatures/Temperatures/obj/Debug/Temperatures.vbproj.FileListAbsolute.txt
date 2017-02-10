@@ -10,3 +10,7 @@ D:\GitHub\ClaseDAM2\VisualBasic\Temperatures\Temperatures\obj\Debug\Temperatures
 D:\GitHub\ClaseDAM2\VisualBasic\Temperatures\Temperatures\obj\Debug\Temperatures.exe
 D:\GitHub\ClaseDAM2\VisualBasic\Temperatures\Temperatures\obj\Debug\Temperatures.xml
 D:\GitHub\ClaseDAM2\VisualBasic\Temperatures\Temperatures\obj\Debug\Temperatures.pdb
+\\Mac\ClaseDAM2\VisualBasic\Temperatures\Temperatures\bin\Debug\Temperatures.exe.config
+\\Mac\ClaseDAM2\VisualBasic\Temperatures\Temperatures\obj\Debug\Temperatures.exe
+\\Mac\ClaseDAM2\VisualBasic\Temperatures\Temperatures\obj\Debug\Temperatures.xml
+\\Mac\ClaseDAM2\VisualBasic\Temperatures\Temperatures\obj\Debug\Temperatures.pdb

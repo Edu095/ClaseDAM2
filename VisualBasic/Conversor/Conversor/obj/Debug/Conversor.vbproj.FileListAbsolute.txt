@@ -8,3 +8,7 @@
 \\Mac\Home\Documents\Visual Studio 2015\Projects\Conversor\Conversor\obj\Debug\Conversor.exe
 \\Mac\Home\Documents\Visual Studio 2015\Projects\Conversor\Conversor\obj\Debug\Conversor.xml
 \\Mac\Home\Documents\Visual Studio 2015\Projects\Conversor\Conversor\obj\Debug\Conversor.pdb
+\\Mac\ClaseDAM2\VisualBasic\Conversor\Conversor\bin\Debug\Conversor.exe.config
+\\Mac\ClaseDAM2\VisualBasic\Conversor\Conversor\obj\Debug\Conversor.exe
+\\Mac\ClaseDAM2\VisualBasic\Conversor\Conversor\obj\Debug\Conversor.xml
+\\Mac\ClaseDAM2\VisualBasic\Conversor\Conversor\obj\Debug\Conversor.pdb

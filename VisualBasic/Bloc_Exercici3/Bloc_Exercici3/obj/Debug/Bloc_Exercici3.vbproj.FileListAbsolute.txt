@@ -13,3 +13,7 @@ D:\GitHub\ClaseDAM2\VisualBasic\Bloc_Exercici3\Bloc_Exercici3\bin\Debug\Bloc_Exe
 D:\GitHub\ClaseDAM2\VisualBasic\Bloc_Exercici3\Bloc_Exercici3\obj\Debug\Bloc_Exercici3.exe
 D:\GitHub\ClaseDAM2\VisualBasic\Bloc_Exercici3\Bloc_Exercici3\obj\Debug\Bloc_Exercici3.xml
 D:\GitHub\ClaseDAM2\VisualBasic\Bloc_Exercici3\Bloc_Exercici3\obj\Debug\Bloc_Exercici3.pdb
+\\Mac\ClaseDAM2\VisualBasic\Bloc_Exercici3\Bloc_Exercici3\bin\Debug\Bloc_Exercici3.exe.config
+\\Mac\ClaseDAM2\VisualBasic\Bloc_Exercici3\Bloc_Exercici3\obj\Debug\Bloc_Exercici3.exe
+\\Mac\ClaseDAM2\VisualBasic\Bloc_Exercici3\Bloc_Exercici3\obj\Debug\Bloc_Exercici3.xml
+\\Mac\ClaseDAM2\VisualBasic\Bloc_Exercici3\Bloc_Exercici3\obj\Debug\Bloc_Exercici3.pdb

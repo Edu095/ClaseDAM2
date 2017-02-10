@@ -20,3 +20,7 @@ D:\GitHub\ClaseDAM2\VisualBasic\Bloc-Exercici2\Bloc-Exercici2\obj\Debug\Bloc-Exe
 D:\GitHub\ClaseDAM2\VisualBasic\Bloc-Exercici2\Bloc-Exercici2\obj\Debug\WindowsApplication1.Form1.resources
 D:\GitHub\ClaseDAM2\VisualBasic\Bloc-Exercici2\Bloc-Exercici2\obj\Debug\WindowsApplication1.Resources.resources
 D:\GitHub\ClaseDAM2\VisualBasic\Bloc-Exercici2\Bloc-Exercici2\obj\Debug\Bloc-Exercici2.vbproj.GenerateResource.Cache
+\\Mac\ClaseDAM2\VisualBasic\Bloc-Exercici2\Bloc-Exercici2\bin\Debug\Bloc-Exercici2.exe.config
+\\Mac\ClaseDAM2\VisualBasic\Bloc-Exercici2\Bloc-Exercici2\obj\Debug\Bloc-Exercici2.exe
+\\Mac\ClaseDAM2\VisualBasic\Bloc-Exercici2\Bloc-Exercici2\obj\Debug\Bloc-Exercici2.xml
+\\Mac\ClaseDAM2\VisualBasic\Bloc-Exercici2\Bloc-Exercici2\obj\Debug\Bloc-Exercici2.pdb

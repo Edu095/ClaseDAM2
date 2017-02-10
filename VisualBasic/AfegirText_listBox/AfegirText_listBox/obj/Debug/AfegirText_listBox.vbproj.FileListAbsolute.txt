@@ -1,1 +1,2 @@
 \\mac\home\Documents\Visual Studio 2015\Projects\AfegirText_listBox\AfegirText_listBox\bin\Debug\AfegirText_listBox.exe.config
+\\Mac\ClaseDAM2\VisualBasic\AfegirText_listBox\AfegirText_listBox\bin\Debug\AfegirText_listBox.exe.config
