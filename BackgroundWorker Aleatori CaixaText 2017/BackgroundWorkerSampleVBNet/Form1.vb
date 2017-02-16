@@ -12,8 +12,7 @@
 
 Public Class Form1
     Dim s As Double
-    Private Sub StartButton_Click(ByVal sender As System.Object,
-                                  ByVal e As System.EventArgs) Handles StartButton.Click
+    Private Sub StartButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles StartButton.Click
         If Not (BackgroundWorker1.IsBusy) Then BackgroundWorker1.RunWorkerAsync()
     End Sub
 
@@ -21,17 +20,14 @@ Public Class Form1
         BackgroundWorker1.CancelAsync()
         BackgroundWorker1.Dispose()
     End Sub
-    Private Sub BackgroundWorker1_DoWork(ByVal sender As System.Object,
-                                         ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+    Private Sub BackgroundWorker1_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         'Obtener el objeto BackgroundWorker que provocó este evento
         Dim helperBW As BackgroundWorker = CType(sender, BackgroundWorker)
         e.Result = Proceso(e.Argument, helperBW, e)
 
     End Sub
 
-    Function Proceso(ByVal n As Integer,
-                   ByVal worker As BackgroundWorker,
-                   ByVal e As DoWorkEventArgs) As Long
+    Function Proceso(ByVal n As Integer, ByVal worker As BackgroundWorker, ByVal e As DoWorkEventArgs) As Long
         Dim result As Long = 0
         Do
             If worker.CancellationPending Then

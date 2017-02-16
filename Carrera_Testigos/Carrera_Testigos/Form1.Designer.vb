@@ -29,15 +29,38 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox0 = New System.Windows.Forms.PictureBox()
+        Me.ImageCorredores = New System.Windows.Forms.ImageList(Me.components)
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.ImageCorredores = New System.Windows.Forms.ImageList(Me.components)
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox0, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -65,57 +88,177 @@ Partial Class Form1
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Location = New System.Drawing.Point(258, 397)
+        Me.PictureBox1.Location = New System.Drawing.Point(275, 397)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(25, 25)
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
-        Me.PictureBox1.Tag = "0"
+        Me.PictureBox1.Tag = "3"
         '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Location = New System.Drawing.Point(258, 430)
+        Me.PictureBox2.Location = New System.Drawing.Point(687, 397)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(25, 25)
         Me.PictureBox2.TabIndex = 3
         Me.PictureBox2.TabStop = False
-        Me.PictureBox2.Tag = "1"
+        Me.PictureBox2.Tag = "0"
         '
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Location = New System.Drawing.Point(258, 462)
+        Me.PictureBox3.Location = New System.Drawing.Point(654, 136)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(25, 25)
         Me.PictureBox3.TabIndex = 4
         Me.PictureBox3.TabStop = False
-        Me.PictureBox3.Tag = "2"
+        Me.PictureBox3.Tag = "1"
         '
-        'PictureBox4
+        'PictureBox0
         '
-        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox4.Location = New System.Drawing.Point(258, 494)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(25, 25)
-        Me.PictureBox4.TabIndex = 5
-        Me.PictureBox4.TabStop = False
-        Me.PictureBox4.Tag = "3"
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.BackColor = System.Drawing.Color.Black
-        Me.PictureBox5.Location = New System.Drawing.Point(334, 185)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(272, 50)
-        Me.PictureBox5.TabIndex = 6
-        Me.PictureBox5.TabStop = False
+        Me.PictureBox0.BackColor = System.Drawing.Color.Black
+        Me.PictureBox0.Location = New System.Drawing.Point(334, 185)
+        Me.PictureBox0.Name = "PictureBox0"
+        Me.PictureBox0.Size = New System.Drawing.Size(272, 50)
+        Me.PictureBox0.TabIndex = 6
+        Me.PictureBox0.TabStop = False
         '
         'ImageCorredores
         '
         Me.ImageCorredores.ImageStream = CType(resources.GetObject("ImageCorredores.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.ImageCorredores.TransparentColor = System.Drawing.Color.Transparent
         Me.ImageCorredores.Images.SetKeyName(0, "persona.png")
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox4.Location = New System.Drawing.Point(242, 138)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(25, 25)
+        Me.PictureBox4.TabIndex = 7
+        Me.PictureBox4.TabStop = False
+        Me.PictureBox4.Tag = "2"
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox5.Location = New System.Drawing.Point(275, 430)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(25, 25)
+        Me.PictureBox5.TabIndex = 8
+        Me.PictureBox5.TabStop = False
+        Me.PictureBox5.Tag = "7"
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox6.Location = New System.Drawing.Point(732, 418)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(25, 25)
+        Me.PictureBox6.TabIndex = 9
+        Me.PictureBox6.TabStop = False
+        Me.PictureBox6.Tag = "4"
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox7.Location = New System.Drawing.Point(634, 104)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(25, 25)
+        Me.PictureBox7.TabIndex = 10
+        Me.PictureBox7.TabStop = False
+        Me.PictureBox7.Tag = "5"
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox8.Location = New System.Drawing.Point(233, 106)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(25, 25)
+        Me.PictureBox8.TabIndex = 11
+        Me.PictureBox8.TabStop = False
+        Me.PictureBox8.Tag = "6"
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox9.Location = New System.Drawing.Point(275, 462)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(25, 25)
+        Me.PictureBox9.TabIndex = 12
+        Me.PictureBox9.TabStop = False
+        Me.PictureBox9.Tag = "11"
+        '
+        'PictureBox10
+        '
+        Me.PictureBox10.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox10.Location = New System.Drawing.Point(785, 427)
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.Size = New System.Drawing.Size(25, 25)
+        Me.PictureBox10.TabIndex = 13
+        Me.PictureBox10.TabStop = False
+        Me.PictureBox10.Tag = "8"
+        '
+        'PictureBox11
+        '
+        Me.PictureBox11.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox11.Location = New System.Drawing.Point(615, 72)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(25, 25)
+        Me.PictureBox11.TabIndex = 14
+        Me.PictureBox11.TabStop = False
+        Me.PictureBox11.Tag = "9"
+        '
+        'PictureBox12
+        '
+        Me.PictureBox12.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox12.Location = New System.Drawing.Point(222, 75)
+        Me.PictureBox12.Name = "PictureBox12"
+        Me.PictureBox12.Size = New System.Drawing.Size(25, 25)
+        Me.PictureBox12.TabIndex = 15
+        Me.PictureBox12.TabStop = False
+        Me.PictureBox12.Tag = "10"
+        '
+        'PictureBox13
+        '
+        Me.PictureBox13.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox13.Location = New System.Drawing.Point(275, 494)
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.Size = New System.Drawing.Size(25, 25)
+        Me.PictureBox13.TabIndex = 16
+        Me.PictureBox13.TabStop = False
+        Me.PictureBox13.Tag = "15"
+        '
+        'PictureBox14
+        '
+        Me.PictureBox14.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox14.Location = New System.Drawing.Point(840, 423)
+        Me.PictureBox14.Name = "PictureBox14"
+        Me.PictureBox14.Size = New System.Drawing.Size(25, 25)
+        Me.PictureBox14.TabIndex = 17
+        Me.PictureBox14.TabStop = False
+        Me.PictureBox14.Tag = "12"
+        '
+        'PictureBox15
+        '
+        Me.PictureBox15.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox15.Location = New System.Drawing.Point(595, 40)
+        Me.PictureBox15.Name = "PictureBox15"
+        Me.PictureBox15.Size = New System.Drawing.Size(25, 25)
+        Me.PictureBox15.TabIndex = 18
+        Me.PictureBox15.TabStop = False
+        Me.PictureBox15.Tag = "13"
+        '
+        'PictureBox16
+        '
+        Me.PictureBox16.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox16.Location = New System.Drawing.Point(211, 44)
+        Me.PictureBox16.Name = "PictureBox16"
+        Me.PictureBox16.Size = New System.Drawing.Size(25, 25)
+        Me.PictureBox16.TabIndex = 19
+        Me.PictureBox16.TabStop = False
+        Me.PictureBox16.Tag = "14"
         '
         'Form1
         '
@@ -125,9 +268,21 @@ Partial Class Form1
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(955, 559)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PictureBox16)
+        Me.Controls.Add(Me.PictureBox15)
+        Me.Controls.Add(Me.PictureBox14)
+        Me.Controls.Add(Me.PictureBox13)
+        Me.Controls.Add(Me.PictureBox12)
+        Me.Controls.Add(Me.PictureBox11)
+        Me.Controls.Add(Me.PictureBox10)
+        Me.Controls.Add(Me.PictureBox9)
+        Me.Controls.Add(Me.PictureBox8)
+        Me.Controls.Add(Me.PictureBox7)
+        Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PictureBox0)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
@@ -139,8 +294,20 @@ Partial Class Form1
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox0, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -151,8 +318,19 @@ Partial Class Form1
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox0 As PictureBox
+    Friend WithEvents ImageCorredores As ImageList
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents ImageCorredores As ImageList
-    Friend WithEvents Timer1 As Timer
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents PictureBox9 As PictureBox
+    Friend WithEvents PictureBox10 As PictureBox
+    Friend WithEvents PictureBox11 As PictureBox
+    Friend WithEvents PictureBox12 As PictureBox
+    Friend WithEvents PictureBox13 As PictureBox
+    Friend WithEvents PictureBox14 As PictureBox
+    Friend WithEvents PictureBox15 As PictureBox
+    Friend WithEvents PictureBox16 As PictureBox
 End Class
