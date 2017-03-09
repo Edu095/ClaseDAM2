@@ -361,6 +361,7 @@ Partial Class Form1
         '
         'ButtonVerd
         '
+        Me.ButtonVerd.Enabled = False
         Me.ButtonVerd.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonVerd.Location = New System.Drawing.Point(17, 23)
         Me.ButtonVerd.Name = "ButtonVerd"
@@ -386,6 +387,7 @@ Partial Class Form1
         '
         'ButtonRosa
         '
+        Me.ButtonRosa.Enabled = False
         Me.ButtonRosa.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonRosa.Location = New System.Drawing.Point(260, 23)
         Me.ButtonRosa.Name = "ButtonRosa"
@@ -396,6 +398,7 @@ Partial Class Form1
         '
         'ButtonGroc
         '
+        Me.ButtonGroc.Enabled = False
         Me.ButtonGroc.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonGroc.Location = New System.Drawing.Point(179, 23)
         Me.ButtonGroc.Name = "ButtonGroc"
@@ -406,6 +409,7 @@ Partial Class Form1
         '
         'ButtonBlau
         '
+        Me.ButtonBlau.Enabled = False
         Me.ButtonBlau.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonBlau.Location = New System.Drawing.Point(98, 23)
         Me.ButtonBlau.Name = "ButtonBlau"

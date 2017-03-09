@@ -8,12 +8,7 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        ButtonVerd.Enabled = False
-        ButtonBlau.Enabled = False
-        ButtonGroc.Enabled = False
-        ButtonRosa.Enabled = False
-
-        For Each ctl In Controls
+        For Each ctl In Controls 'Posar imatges als corredors
             If TypeOf ctl Is PictureBox Then
                 Select Case ctl.Tag
                     Case 0 To 3
@@ -27,38 +22,34 @@ Public Class Form1
                 End Select
             End If
         Next
+        'Crear threads y agregarlos al array
+        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox1, PictureBox2))) 'Equip 1 ----
+        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox2, PictureBox3))) 'Equip 1
+        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox3, PictureBox4))) 'Equip 1
+        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox4, PictureBox17))) 'Equip 1 ----
+        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox5, PictureBox6))) 'Equip 2 ----
+        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox6, PictureBox7))) 'Equip 2
+        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox7, PictureBox8))) 'Equip 2
+        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox8, PictureBox17))) 'Equip 2 ----
+        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox9, PictureBox10))) 'Equip 3 ----
+        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox10, PictureBox11))) 'Equip 3
+        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox11, PictureBox12))) 'Equip 3
+        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox12, PictureBox17))) 'Equip 3 ----
+        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox13, PictureBox14))) 'Equip 4 ----
+        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox14, PictureBox15))) 'Equip 4
+        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox15, PictureBox16))) 'Equip 4
+        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox16, PictureBox17))) 'Equip 4 ----
 
-        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox1, PictureBox2)))
-        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox2, PictureBox3)))
-        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox3, PictureBox4)))
-        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox4, PictureBox17)))
-
-        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox5, PictureBox6)))
-        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox6, PictureBox7)))
-        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox7, PictureBox8)))
-        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox8, PictureBox17)))
-
-        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox9, PictureBox10)))
-        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox10, PictureBox11)))
-        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox11, PictureBox12)))
-        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox12, PictureBox17)))
-
-        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox13, PictureBox14)))
-        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox14, PictureBox15)))
-        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox15, PictureBox16)))
-        clsThreads.Add(New Thread(Sub() Me.carrera(PictureBox16, PictureBox17)))
-
-        For I As Integer = 0 To clsThreads.Count - 1
+        For I As Integer = 0 To clsThreads.Count - 1 'Donar nom per treballar amb ells
             clsThreads(I).Name = CStr(I)
         Next
 
     End Sub
-
     Sub carrera(ByRef pbox As PictureBox, ByRef pboxFi As PictureBox)
         Dim tg As Integer = pbox.Tag
-        Dim vel As Integer = Int((6 * Rnd()) + 2)
+        Dim vel As Integer = Int((6 * Rnd()) + 2) 'pixels que abançen els corredors
 
-        While (pbox.Location.X + 23) < pboxFi.Location.X
+        While (pbox.Location.X + 23) < pboxFi.Location.X 'Recta fins al següent picture
             pbox.Invoke(New MethodInvoker(Sub() Me.InvokePbox(tg, vel)))
             Thread.CurrentThread.Sleep(Int((50 * Rnd()) + 20))
         End While
@@ -140,74 +131,46 @@ Public Class Form1
             ButtonRosa.Enabled = False
         End If
     End Sub
-
     Private Sub ButtonStart_Click(sender As Object, e As EventArgs) Handles ButtonStart.Click
         Timer1.Start()
-
-        clsThreads(0).IsBackground = True
-        clsThreads(0).Start()
-        clsThreads(4).IsBackground = True
-        clsThreads(4).Start()
-        clsThreads(8).IsBackground = True
-        clsThreads(8).Start()
-        clsThreads(12).IsBackground = True
-        clsThreads(12).Start()
+        For Each i As Integer In {0, 4, 8, 12}
+            clsThreads(i).IsBackground = True
+            clsThreads(i).Start()
+        Next
 
         ButtonVerd.Enabled = True
         ButtonBlau.Enabled = True
         ButtonGroc.Enabled = True
         ButtonRosa.Enabled = True
         ButtonStart.Enabled = False
-
         NouJocToolStripMenuItem.Enabled = False
 
     End Sub
-
-    Private Sub MinimitzaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MinimitzaToolStripMenuItem.Click
-        Me.WindowState = FormWindowState.Minimized
-    End Sub
-
-    Private Sub NouJocToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NouJocToolStripMenuItem.Click
-        Application.Restart()
-        Me.Refresh()
-    End Sub
-
     Private Sub ButtonVerd_Click(sender As Object, e As EventArgs) Handles ButtonVerd.Click
-        clsThreads(0).Abort()
-        clsThreads(1).Abort()
-        clsThreads(2).Abort()
-        clsThreads(3).Abort()
+        For Each i As Integer In {0, 1, 2, 3}
+            clsThreads(i).Abort()
+        Next
         ButtonVerd.Enabled = False
         ctrlThAlive()
     End Sub
-
     Private Sub ButtonBlau_Click(sender As Object, e As EventArgs) Handles ButtonBlau.Click
-        clsThreads(4).Abort()
-        clsThreads(5).Abort()
-        clsThreads(6).Abort()
-        clsThreads(7).Abort()
+        For Each i As Integer In {4, 5, 6, 7}
+            clsThreads(i).Abort()
+        Next
         ButtonBlau.Enabled = False
         ctrlThAlive()
     End Sub
-
-    Private Sub AcercaDeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AcercaDeToolStripMenuItem.Click
-        AboutBox1.Show()
-    End Sub
-
     Private Sub ButtonGroc_Click(sender As Object, e As EventArgs) Handles ButtonGroc.Click
-        clsThreads(8).Abort()
-        clsThreads(9).Abort()
-        clsThreads(10).Abort()
-        clsThreads(11).Abort()
+        For Each i As Integer In {8, 9, 10, 11}
+            clsThreads(i).Abort()
+        Next
         ButtonGroc.Enabled = False
         ctrlThAlive()
     End Sub
-
     Private Sub ButtonRosa_Click(sender As Object, e As EventArgs) Handles ButtonRosa.Click
-        clsThreads(12).Abort()
-        clsThreads(13).Abort()
-        clsThreads(14).Abort()
-        clsThreads(15).Abort()
+        For Each i As Integer In {12, 13, 14, 15}
+            clsThreads(i).Abort()
+        Next
         ButtonRosa.Enabled = False
         ctrlThAlive()
     End Sub
@@ -220,7 +183,16 @@ Public Class Form1
         Next
         If n = 0 Then meta(Nothing)
     End Sub
-
+    Private Sub AcercaDeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AcercaDeToolStripMenuItem.Click
+        AboutBox1.Show()
+    End Sub
+    Private Sub MinimitzaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MinimitzaToolStripMenuItem.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+    Private Sub NouJocToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NouJocToolStripMenuItem.Click
+        Application.Restart()
+        Me.Refresh()
+    End Sub
     Private Sub SurtirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SurtirToolStripMenuItem.Click
         Me.Close()
     End Sub
