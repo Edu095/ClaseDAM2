@@ -90,4 +90,8 @@
         Next
         Me.Size = New System.Drawing.Size(500, 337)
     End Sub
+
+    Private Sub TextBoxDNI_TextChanged(sender As Object, e As EventArgs) Handles TextBoxDNI.TextChanged
+
+    End Sub
 End Class

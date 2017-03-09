@@ -386,7 +386,11 @@ Public Class frmTabControl
 
     End Sub
 
-    Private Sub Borrar(ByVal sender As System.Object, _
+    Private Sub txtNombre_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged
+
+    End Sub
+
+    Private Sub Borrar(ByVal sender As System.Object,
         ByVal e As System.EventArgs) Handles cmdBorrar.Click
         vAgregado = False
         vConcurso = False

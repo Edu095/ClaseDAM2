@@ -23,6 +23,8 @@ Public Class Form1
             Do While sr.Peek() >= 0
                 ReDim Preserve pob(pos + 1)
                 Dim c(0) As Char
+                sr.ReadLine()
+                sr.ReadLine()
                 sr.Read(c, 0, c.Length)
                 Select Case conta
                     Case 0
@@ -214,6 +216,10 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialog1.FileOk
 
     End Sub
 End Class

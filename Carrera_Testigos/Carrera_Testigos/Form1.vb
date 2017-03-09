@@ -15,41 +15,89 @@ Public Class Form1
     Dim th1, th2, th3, th4, th5, th6, th7, th8, th9, th10, th11, th12, th13, th14, th15, th16, thControl As Thread
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        PictureBox1.Image = ImageCorredores.Images(0)
 
         For Each ctl In Controls
             If TypeOf ctl Is PictureBox Then
-                ctl.tag 'switch case 1,2,3,4 = imageCorredors.1/2/3/4
+                Select Case ctl.Tag
+                    Case 1 To 4
+                        ctl.Image = ImageCorredores.Images(0)
+                    Case 5 To 8
+                        ctl.Image = ImageCorredores.Images(1)
+                    Case 9 To 12
+                        ctl.Image = ImageCorredores.Images(2)
+                    Case 13 To 16
+                        ctl.Image = ImageCorredores.Images(3)
+                End Select
             End If
         Next
 
-        th1 = New Thread(Sub() Me.carrera(PictureBox1, PictureBox1, 4))
-        th2 = New Thread(Sub() Me.carrera(PictureBox2, PictureBox1, 4))
-        th3 = New Thread(Sub() Me.carrera(PictureBox3, PictureBox1, 4))
-        th4 = New Thread(Sub() Me.carrera(PictureBox4, PictureBox1, 4))
-        th5 = New Thread(Sub() Me.carrera(PictureBox5, PictureBox1, 4))
-        th6 = New Thread(Sub() Me.carrera(PictureBox6, PictureBox1, 4))
-        th7 = New Thread(Sub() Me.carrera(PictureBox7, PictureBox1, 4))
-        th8 = New Thread(Sub() Me.carrera(PictureBox8, PictureBox1, 4))
-        th9 = New Thread(Sub() Me.carrera(PictureBox9, PictureBox1, 4))
-        th10 = New Thread(Sub() Me.carrera(PictureBox10, PictureBox1, 4))
-        th11 = New Thread(Sub() Me.carrera(PictureBox11, PictureBox1, 4))
-        th12 = New Thread(Sub() Me.carrera(PictureBox12, PictureBox1, 4))
-        th13 = New Thread(Sub() Me.carrera(PictureBox13, PictureBox1, 4))
-        th14 = New Thread(Sub() Me.carrera(PictureBox14, PictureBox1, 4))
-        th15 = New Thread(Sub() Me.carrera(PictureBox15, PictureBox1, 4))
-        th16 = New Thread(Sub() Me.carrera(PictureBox16, PictureBox1, 4))
+        Dim g1 As Integer = 90
+        Dim g2 As Integer = 70
+        'g1(0) = (180 / PI) - 235
+        'g2(0) = (180 / PI) - 210
+        'g3(0) = (180 / PI) - 180
+        'g4(0) = (180 / PI) - 150
+
+        th1 = New Thread(Sub() Me.carrera(PictureBox1, PictureBox2, corr1, g1))
+        th2 = New Thread(Sub() Me.carrera(PictureBox5, PictureBox6, corr2, g2))
 
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        th1.Start()
+        th2.Start()
+        'th3.Start()
+        'th4.Start()
 
     End Sub
 
-    Private Sub carrera(ByRef pbox As PictureBox, ByRef pboxFi As PictureBox, ByVal yCorr As Integer)
+    Private Sub carrera(ByRef pbox As PictureBox, ByRef pboxFi As PictureBox, ByVal yCorr As Integer, ByVal gradC As Integer)
 
+        If pbox.Location.X > (pboxFi.Location.X + 25) Then
+            If pbox.Location.X >= derX Then
+                Curva(gradC, 270, derX, izDerY, yCorr, pbox)
+            Else
+                ' Recta()
+            End If
+        End If
+        th1.Abort()
+        th2.Abort()
+        'th3.Abort()
+        'th4.Abort()
+
+    End Sub
+
+    Private Sub Curva(ByVal grd As Integer, ByVal topObot As Integer, ByVal posX As Integer, ByVal posY As Integer, ByVal radio As Integer, ByRef pbox As PictureBox)
+        Dim rad As Decimal
+        Dim rx, ry As Integer
+        Dim tg As Integer = pbox.Tag
+        While grd <> topObot
+            rad = grd * (PI / 180) 'calculo el radiantede grad
+            rx = radio * Cos(rad) 'asigno la posicion x del objeto
+            ry = radio * Sin(rad) 'asigno la posicion y del objeto
+            pbox.Invoke(New MethodInvoker(Sub() Me.InvokePbox(tg, posX, posY, rx, ry))) 'pbox.Location = New Point(posX + rx, posY + ry)
+            If grd <= 270 And topObot = 90 Then grd -= 2 'si esta a la curva de l'esquerra
+            If (grd <= 90 Or grd <= 360) And topObot = 270 Then 'si esta a la curva de la dreta
+                If grd = 0 Then grd = 360
+                grd -= 2
+            End If
+            Thread.CurrentThread.Sleep(10)
+            'Label1.Text = "Player 1: " + Str(posX + rx) + ", " + Str(posY + ry) 'Posicio player
+            'Me.Refresh()
+        End While
+    End Sub
+    Sub InvokePbox(ByVal tg As Integer, ByVal px As Integer, ByVal py As Integer, ByVal rx As Integer, ByVal ry As Integer)
+        For Each ctl In Controls
+            If TypeOf ctl Is PictureBox Then
+                If ctl.Tag = tg Then
+                    ctl.Location = New Point(px + rx, py + ry)
+                End If
+            End If
+        Next
+    End Sub
+    Sub Recta(ByRef pbox As PictureBox, ByRef pboxFi As PictureBox, ByVal yCorr As Integer)
         While pboxFi.Location.X
             If pbox.Location.X > 687 And pbox.Location.Y < yCorr Then
-                Curva(90, 270, derX, izDerY, corr1)
+                Curva(90, 270, derX, izDerY, corr1, pbox)
             End If
         End While
         Randomize()
@@ -63,7 +111,7 @@ Public Class Form1
             Label1.Text = "Player 1: " + Str(pX) + ", " + Str(pY) 'Posicio player
             'Me.Refresh()
         End While
-        Curva(90, 270, derX, izDerY, corr1)
+        Curva(90, 270, derX, izDerY, corr1, pbox)
 
 
         pY = 137 'posicio Y recta superior
@@ -74,26 +122,7 @@ Public Class Form1
             Label1.Text = "Player 1: " + Str(pX) + ", " + Str(pY) 'Posicio player
             'Me.Refresh()
         End While
-        Curva(270, 90, izX, izDerY, corr1)
-    End Sub
-
-    Private Sub Curva(ByVal grd As Integer, ByVal topObot As Integer, ByVal posX As Integer, ByVal posY As Integer, ByVal radio As Integer)
-        Dim rad As Decimal
-        Dim rx, ry As Integer
-        While grd <> topObot
-            rad = ((grd / radio) * radio) * (PI / 180) 'calculo el radiantede grad
-            rx = radio * Cos(rad) 'asigno la posicion x del objeto
-            ry = radio * Sin(rad) 'asigno la posicion y del objeto
-            PictureBox1.Location = New Point(posX + rx, posY + ry)
-            If grd <= 270 And topObot = 90 Then grd -= 2 'si esta a la curva de l'esquerra
-            If (grd <= 90 Or grd <= 360) And topObot = 270 Then 'si esta a la curva de la dreta
-                If grd = 0 Then grd = 360
-                grd -= 2
-            End If
-            Thread.CurrentThread.Sleep(10)
-            Label1.Text = "Player 1: " + Str(posX + rx) + ", " + Str(posY + ry) 'Posicio player
-            'Me.Refresh()
-        End While
+        'Curva(270, 90, izX, izDerY, corr1)
     End Sub
 
 End Class

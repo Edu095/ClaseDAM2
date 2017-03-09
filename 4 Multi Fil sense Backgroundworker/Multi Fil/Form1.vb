@@ -18,15 +18,10 @@ Public Class Form1
     End Sub
 
     Private Sub ThreadTask()
-        Dim ProgBarStep As Integer
-        Dim RandomNo As New Random()
         Do Until StopThread = True
-            ProgBarStep = ProgressBar1.Step * RandomNo.Next(-1, 2)
-            NewVal = ProgressBar1.Value + ProgBarStep
-            If NewVal > ProgressBar1.Maximum Then
-                NewVal = ProgressBar1.Maximum
-            ElseIf NewVal < ProgressBar1.Minimum Then
-                NewVal = ProgressBar1.Minimum
+            NewVal += 1
+            If NewVal = ProgressBar1.Maximum Then
+                StopThread = True
             End If
             Me.ProgressBar1.Invoke(New MethodInvoker(AddressOf InvokeProgBar1))   ' Me.ProgressBar1.Value = CInt(NewVal)
             Me.TextBox1.Invoke(New MethodInvoker(AddressOf InvokeTextBox1))    ' Me.TextBox1.Text = CStr(NewVal)
@@ -73,4 +68,7 @@ Public Class Form1
         n = n + 1
     End Sub
 
+    Private Sub ProgressBar1_Click(sender As Object, e As EventArgs) Handles ProgressBar1.Click
+
+    End Sub
 End Class
