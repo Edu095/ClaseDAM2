@@ -59,9 +59,9 @@ Namespace My
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
          Global.System.Configuration.DefaultSettingValueAttribute("Data Source=EDUARDOJERA51E\SQLEXPRESS;Initial Catalog=laboratori;Integrated Secur"& _ 
             "ity=True")>  _
-        Public ReadOnly Property laboratoriConnectionString() As String
+        Public ReadOnly Property laboratoriConnection() As String
             Get
-                Return CType(Me("laboratoriConnectionString"),String)
+                Return CType(Me("laboratoriConnection"),String)
             End Get
         End Property
     End Class
@@ -75,9 +75,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.Formules.My.MySettings
+        Friend ReadOnly Property Settings() As Global.FLaboratori.My.MySettings
             Get
-                Return Global.Formules.My.MySettings.Default
+                Return Global.FLaboratori.My.MySettings.Default
             End Get
         End Property
     End Module
