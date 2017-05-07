@@ -6,6 +6,8 @@
         Me.ElementTableAdapter.Fill(Me.LaboratoriDataSet.element)
         'TODO: esta línea de código carga datos en la tabla 'LaboratoriDataSet.formula' Puede moverla o quitarla según sea necesario.
         Me.FormulaTableAdapter.Fill(Me.LaboratoriDataSet.formula)
+        Codi_eComboBox.Text = ""
+        Codi_fComboBox.Text = ""
     End Sub
 
     Private Sub Inset_fButton1_Click(sender As Object, e As EventArgs) Handles Insert_fButton.Click
@@ -15,6 +17,9 @@
                 Me.FormulaTableAdapter.Fill(LaboratoriDataSet.formula)
                 Form2.FormulaTableAdapter.Fill(Form2.LaboratoriDataSet.formula)
                 limpiarCampos()
+                If Form2.FiltrarDadesToolStripMenuItem.Enabled = False Then
+                    Form2.FiltrarDadesToolStripMenuItem_Click(sender, e)
+                End If
             Else
                 MsgBox("Has d'introduïr un Codi valid")
             End If
@@ -30,6 +35,9 @@
                 Me.ElementTableAdapter.Fill(LaboratoriDataSet.element)
                 Form2.ElementTableAdapter.Fill(Form2.LaboratoriDataSet.element)
                 limpiarCampos()
+                If Form2.FiltrarDadesToolStripMenuItem.Enabled = False Then
+                    Form2.FiltrarDadesToolStripMenuItem_Click(sender, e)
+                End If
             Else
                 MsgBox("Has d'introduïr un Codi valid")
             End If
@@ -45,6 +53,9 @@
                 Me.ForElemTableAdapter.Fill(LaboratoriDataSet.forElem)
                 Form2.ForElemTableAdapter.Fill(Form2.LaboratoriDataSet.forElem)
                 limpiarCampos()
+                If Form2.FiltrarDadesToolStripMenuItem.Enabled = False Then
+                    Form2.FiltrarDadesToolStripMenuItem_Click(sender, e)
+                End If
             Else
                 MsgBox("Has d'introduïr una cantitat valid")
             End If

@@ -1762,7 +1762,7 @@ Namespace laboratoriDataSetTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[element] ([codi_e], [nom], [data]) VALUES (@codi_e, @nom, @dat"& _ 
-                "a);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT codi_e, nom, data FROM element WHERE (codi_e = @codi_e)"
+                "a);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT codi_e, nom, data FROM element WHERE (codi_e = @codi_e)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@codi_e", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "codi_e", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nom", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nom", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -1771,8 +1771,8 @@ Namespace laboratoriDataSetTableAdapters
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[element] SET [codi_e] = @codi_e, [nom] = @nom, [data] = @data WHERE"& _ 
                 " (([codi_e] = @Original_codi_e) AND ([nom] = @Original_nom) AND ((@IsNull_data ="& _ 
-                " 1 AND [data] IS NULL) OR ([data] = @Original_data)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT codi_e, nom, data"& _ 
-                " FROM element WHERE (codi_e = @codi_e)"
+                " 1 AND [data] IS NULL) OR ([data] = @Original_data)));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT codi_e, nom, data "& _ 
+                "FROM element WHERE (codi_e = @codi_e)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@codi_e", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "codi_e", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nom", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nom", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -1793,11 +1793,16 @@ Namespace laboratoriDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT codi_e, nom, data FROM dbo.element"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT codi_e, nom, data FROM dbo.element"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE nom = @asd"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@asd", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "nom", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1822,6 +1827,24 @@ Namespace laboratoriDataSetTableAdapters
             Dim dataTable As laboratoriDataSet.elementDataTable = New laboratoriDataSet.elementDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByCBox(ByVal dataTable As laboratoriDataSet.elementDataTable, ByVal asd As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (asd Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("asd")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(asd,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2129,8 +2152,8 @@ Namespace laboratoriDataSetTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[forElem] ([codi_f1], [codi_e1], [qt]) VALUES (@codi_f1, @codi_"& _ 
-                "e1, @qt);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT codi_f1, codi_e1, qt FROM forElem WHERE (codi_e1 = @codi_e1) A"& _ 
-                "ND (codi_f1 = @codi_f1)"
+                "e1, @qt);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT codi_f1, codi_e1, qt FROM forElem WHERE (codi_e1 = @codi_e1) AN"& _ 
+                "D (codi_f1 = @codi_f1)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@codi_f1", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "codi_f1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@codi_e1", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "codi_e1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -2139,8 +2162,8 @@ Namespace laboratoriDataSetTableAdapters
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[forElem] SET [codi_f1] = @codi_f1, [codi_e1] = @codi_e1, [qt] = @qt"& _ 
                 " WHERE (([codi_f1] = @Original_codi_f1) AND ([codi_e1] = @Original_codi_e1) AND "& _ 
-                "((@IsNull_qt = 1 AND [qt] IS NULL) OR ([qt] = @Original_qt)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT codi_f1, "& _ 
-                "codi_e1, qt FROM forElem WHERE (codi_e1 = @codi_e1) AND (codi_f1 = @codi_f1)"
+                "((@IsNull_qt = 1 AND [qt] IS NULL) OR ([qt] = @Original_qt)));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT codi_f1, c"& _ 
+                "odi_e1, qt FROM forElem WHERE (codi_e1 = @codi_e1) AND (codi_f1 = @codi_f1)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@codi_f1", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "codi_f1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@codi_e1", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "codi_e1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -2161,11 +2184,21 @@ Namespace laboratoriDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(2) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT codi_f1, codi_e1, qt FROM dbo.forElem"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT codi_f1, codi_e1, qt FROM dbo.forElem"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE codi_e1 = @asd"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@asd", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "codi_e1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "SELECT codi_f1, codi_e1, qt FROM dbo.forElem"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE codi_f1 = @codif"
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@codif", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "codi_f1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2190,6 +2223,42 @@ Namespace laboratoriDataSetTableAdapters
             Dim dataTable As laboratoriDataSet.forElemDataTable = New laboratoriDataSet.forElemDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByEF(ByVal dataTable As laboratoriDataSet.forElemDataTable, ByVal asd As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (asd Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("asd")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(asd,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByFE(ByVal dataTable As laboratoriDataSet.forElemDataTable, ByVal codif As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            If (codif Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("codif")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(codif,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2501,8 +2570,8 @@ Namespace laboratoriDataSetTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[formula] ([codi_f], [nom], [data], [activa]) VALUES (@codi_f, "& _ 
-                "@nom, @data, @activa);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT codi_f, nom, data, activa FROM formula WHERE (cod"& _ 
-                "i_f = @codi_f)"
+                "@nom, @data, @activa);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT codi_f, nom, data, activa FROM formula WHERE (codi"& _ 
+                "_f = @codi_f)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@codi_f", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "codi_f", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nom", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nom", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -2513,8 +2582,8 @@ Namespace laboratoriDataSetTableAdapters
             Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[formula] SET [codi_f] = @codi_f, [nom] = @nom, [data] = @data, [act"& _ 
                 "iva] = @activa WHERE (([codi_f] = @Original_codi_f) AND ([nom] = @Original_nom) "& _ 
                 "AND ((@IsNull_data = 1 AND [data] IS NULL) OR ([data] = @Original_data)) AND ((@"& _ 
-                "IsNull_activa = 1 AND [activa] IS NULL) OR ([activa] = @Original_activa)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SEL"& _ 
-                "ECT codi_f, nom, data, activa FROM formula WHERE (codi_f = @codi_f)"
+                "IsNull_activa = 1 AND [activa] IS NULL) OR ([activa] = @Original_activa)));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELE"& _ 
+                "CT codi_f, nom, data, activa FROM formula WHERE (codi_f = @codi_f)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@codi_f", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "codi_f", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nom", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nom", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -2545,9 +2614,9 @@ Namespace laboratoriDataSetTableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT codi_f, nom, data, activa FROM dbo.formula"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE codi_f = @asd"
+            Me._commandCollection(1).CommandText = "SELECT codi_f, nom, data, activa FROM dbo.formula "&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE nom = @asd"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@asd", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "codi_f", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@asd", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "nom", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

@@ -90,6 +90,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>laboratoriDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="laboratoriDataSet.vb">
+      <DependentUpon>laboratoriDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

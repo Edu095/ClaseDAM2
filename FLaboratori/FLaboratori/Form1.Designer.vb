@@ -56,13 +56,12 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.ArxiuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TaulesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FormulaTableAdapter = New FLaboratori.laboratoriDataSetTableAdapters.formulaTableAdapter()
         Me.TableAdapterManager = New FLaboratori.laboratoriDataSetTableAdapters.TableAdapterManager()
         Me.ElementTableAdapter = New FLaboratori.laboratoriDataSetTableAdapters.elementTableAdapter()
         Me.ForElemTableAdapter = New FLaboratori.laboratoriDataSetTableAdapters.forElemTableAdapter()
         Me.ForElemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TaulesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -82,7 +81,7 @@ Partial Class Form1
         Me.TabControl1.Location = New System.Drawing.Point(12, 27)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(553, 455)
+        Me.TabControl1.Size = New System.Drawing.Size(333, 455)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
@@ -94,7 +93,7 @@ Partial Class Form1
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(545, 429)
+        Me.TabPage1.Size = New System.Drawing.Size(325, 429)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Insertar"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -367,25 +366,25 @@ Partial Class Form1
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(545, 429)
+        Me.TabPage2.Size = New System.Drawing.Size(325, 429)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Modificar"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArxiuToolStripMenuItem, Me.TaulesToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TaulesToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(577, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(355, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'ArxiuToolStripMenuItem
+        'TaulesToolStripMenuItem
         '
-        Me.ArxiuToolStripMenuItem.Name = "ArxiuToolStripMenuItem"
-        Me.ArxiuToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
-        Me.ArxiuToolStripMenuItem.Text = "Arxiu"
+        Me.TaulesToolStripMenuItem.Name = "TaulesToolStripMenuItem"
+        Me.TaulesToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
+        Me.TaulesToolStripMenuItem.Text = "Taules"
         '
         'FormulaTableAdapter
         '
@@ -412,17 +411,11 @@ Partial Class Form1
         Me.ForElemBindingSource.DataMember = "forElem"
         Me.ForElemBindingSource.DataSource = Me.LaboratoriDataSet
         '
-        'TaulesToolStripMenuItem
-        '
-        Me.TaulesToolStripMenuItem.Name = "TaulesToolStripMenuItem"
-        Me.TaulesToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
-        Me.TaulesToolStripMenuItem.Text = "Taules"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(577, 506)
+        Me.ClientSize = New System.Drawing.Size(355, 490)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -451,7 +444,6 @@ Partial Class Form1
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents ArxiuToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LaboratoriDataSet As laboratoriDataSet
     Friend WithEvents FormulaBindingSource As BindingSource
     Friend WithEvents FormulaTableAdapter As laboratoriDataSetTableAdapters.formulaTableAdapter

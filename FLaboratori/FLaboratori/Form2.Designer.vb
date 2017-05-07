@@ -25,20 +25,23 @@ Partial Class Form2
         Me.components = New System.ComponentModel.Container()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.Formules_TabPage = New System.Windows.Forms.TabPage()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.CodifDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ActivaDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.FormulaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataGridViewForElem = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Codie1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QtDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ForElemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LaboratoriDataSet = New FLaboratori.laboratoriDataSet()
         Me.FormulaDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.FormulaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Elements_TabPage = New System.Windows.Forms.TabPage()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.ForElemDataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ElementDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -46,32 +49,38 @@ Partial Class Form2
         Me.ElementBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ElemForm_TabPage = New System.Windows.Forms.TabPage()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Codie1DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QtDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ForElemDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ForElemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.DadesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MostrarTaulesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FiltrarDadesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.LabelFiltre = New System.Windows.Forms.Label()
         Me.FormulaTableAdapter = New FLaboratori.laboratoriDataSetTableAdapters.formulaTableAdapter()
         Me.TableAdapterManager = New FLaboratori.laboratoriDataSetTableAdapters.TableAdapterManager()
         Me.ElementTableAdapter = New FLaboratori.laboratoriDataSetTableAdapters.elementTableAdapter()
         Me.ForElemTableAdapter = New FLaboratori.laboratoriDataSetTableAdapters.forElemTableAdapter()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.DadesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ButtonDelete = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.Formules_TabPage.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FormulaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridViewForElem, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ForElemBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LaboratoriDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FormulaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FormulaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Elements_TabPage.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ForElemDataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ElementDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ElementBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElemForm_TabPage.SuspendLayout()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ForElemDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ForElemBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -89,7 +98,7 @@ Partial Class Form2
         'Formules_TabPage
         '
         Me.Formules_TabPage.AutoScroll = True
-        Me.Formules_TabPage.Controls.Add(Me.DataGridView1)
+        Me.Formules_TabPage.Controls.Add(Me.DataGridViewForElem)
         Me.Formules_TabPage.Controls.Add(Me.FormulaDataGridView)
         Me.Formules_TabPage.Location = New System.Drawing.Point(4, 22)
         Me.Formules_TabPage.Name = "Formules_TabPage"
@@ -99,45 +108,50 @@ Partial Class Form2
         Me.Formules_TabPage.Text = "Formules"
         Me.Formules_TabPage.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'DataGridViewForElem
         '
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CodifDataGridViewTextBoxColumn, Me.NomDataGridViewTextBoxColumn, Me.DataDataGridViewTextBoxColumn, Me.ActivaDataGridViewCheckBoxColumn})
-        Me.DataGridView1.DataSource = Me.FormulaBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 6)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(509, 292)
-        Me.DataGridView1.TabIndex = 1
+        Me.DataGridViewForElem.AllowUserToAddRows = False
+        Me.DataGridViewForElem.AllowUserToDeleteRows = False
+        Me.DataGridViewForElem.AutoGenerateColumns = False
+        Me.DataGridViewForElem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewForElem.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn10, Me.Codie1DataGridViewTextBoxColumn, Me.QtDataGridViewTextBoxColumn})
+        Me.DataGridViewForElem.DataSource = Me.ForElemBindingSource
+        Me.DataGridViewForElem.Location = New System.Drawing.Point(3, 69)
+        Me.DataGridViewForElem.Name = "DataGridViewForElem"
+        Me.DataGridViewForElem.ReadOnly = True
+        Me.DataGridViewForElem.Size = New System.Drawing.Size(509, 229)
+        Me.DataGridViewForElem.TabIndex = 4
+        Me.DataGridViewForElem.Visible = False
         '
-        'CodifDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn10
         '
-        Me.CodifDataGridViewTextBoxColumn.DataPropertyName = "codi_f"
-        Me.CodifDataGridViewTextBoxColumn.HeaderText = "codi_f"
-        Me.CodifDataGridViewTextBoxColumn.Name = "CodifDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "codi_f1"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "Codi Formula"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
+        Me.DataGridViewTextBoxColumn10.Visible = False
         '
-        'NomDataGridViewTextBoxColumn
+        'Codie1DataGridViewTextBoxColumn
         '
-        Me.NomDataGridViewTextBoxColumn.DataPropertyName = "nom"
-        Me.NomDataGridViewTextBoxColumn.HeaderText = "nom"
-        Me.NomDataGridViewTextBoxColumn.Name = "NomDataGridViewTextBoxColumn"
+        Me.Codie1DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Codie1DataGridViewTextBoxColumn.DataPropertyName = "codi_e1"
+        Me.Codie1DataGridViewTextBoxColumn.HeaderText = "Codi Element"
+        Me.Codie1DataGridViewTextBoxColumn.Name = "Codie1DataGridViewTextBoxColumn"
+        Me.Codie1DataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataDataGridViewTextBoxColumn
+        'QtDataGridViewTextBoxColumn
         '
-        Me.DataDataGridViewTextBoxColumn.DataPropertyName = "data"
-        Me.DataDataGridViewTextBoxColumn.HeaderText = "data"
-        Me.DataDataGridViewTextBoxColumn.Name = "DataDataGridViewTextBoxColumn"
+        Me.QtDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.QtDataGridViewTextBoxColumn.DataPropertyName = "qt"
+        Me.QtDataGridViewTextBoxColumn.HeaderText = "Quantitat"
+        Me.QtDataGridViewTextBoxColumn.Name = "QtDataGridViewTextBoxColumn"
+        Me.QtDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'ActivaDataGridViewCheckBoxColumn
+        'ForElemBindingSource
         '
-        Me.ActivaDataGridViewCheckBoxColumn.DataPropertyName = "activa"
-        Me.ActivaDataGridViewCheckBoxColumn.HeaderText = "activa"
-        Me.ActivaDataGridViewCheckBoxColumn.Name = "ActivaDataGridViewCheckBoxColumn"
-        '
-        'FormulaBindingSource
-        '
-        Me.FormulaBindingSource.DataMember = "formula"
-        Me.FormulaBindingSource.DataSource = Me.LaboratoriDataSet
+        Me.ForElemBindingSource.DataMember = "forElem"
+        Me.ForElemBindingSource.DataSource = Me.LaboratoriDataSet
         '
         'LaboratoriDataSet
         '
@@ -162,7 +176,7 @@ Partial Class Form2
         '
         Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "codi_f"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "codi_f"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Codi Formula"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
         '
@@ -170,7 +184,7 @@ Partial Class Form2
         '
         Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "nom"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "nom"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Nom"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         Me.DataGridViewTextBoxColumn2.ReadOnly = True
         '
@@ -178,7 +192,7 @@ Partial Class Form2
         '
         Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "data"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "data"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Data"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
@@ -186,14 +200,19 @@ Partial Class Form2
         '
         Me.DataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.DataGridViewCheckBoxColumn1.DataPropertyName = "activa"
-        Me.DataGridViewCheckBoxColumn1.HeaderText = "activa"
+        Me.DataGridViewCheckBoxColumn1.HeaderText = "Activa"
         Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
         Me.DataGridViewCheckBoxColumn1.ReadOnly = True
+        '
+        'FormulaBindingSource
+        '
+        Me.FormulaBindingSource.DataMember = "formula"
+        Me.FormulaBindingSource.DataSource = Me.LaboratoriDataSet
         '
         'Elements_TabPage
         '
         Me.Elements_TabPage.AutoScroll = True
-        Me.Elements_TabPage.Controls.Add(Me.DataGridView2)
+        Me.Elements_TabPage.Controls.Add(Me.ForElemDataGridView1)
         Me.Elements_TabPage.Controls.Add(Me.ElementDataGridView)
         Me.Elements_TabPage.Location = New System.Drawing.Point(4, 22)
         Me.Elements_TabPage.Name = "Elements_TabPage"
@@ -203,13 +222,45 @@ Partial Class Form2
         Me.Elements_TabPage.Text = "Elements"
         Me.Elements_TabPage.UseVisualStyleBackColor = True
         '
-        'DataGridView2
+        'ForElemDataGridView1
         '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(3, 6)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(509, 292)
-        Me.DataGridView2.TabIndex = 2
+        Me.ForElemDataGridView1.AllowUserToAddRows = False
+        Me.ForElemDataGridView1.AllowUserToDeleteRows = False
+        Me.ForElemDataGridView1.AutoGenerateColumns = False
+        Me.ForElemDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ForElemDataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14})
+        Me.ForElemDataGridView1.DataSource = Me.ForElemBindingSource
+        Me.ForElemDataGridView1.Location = New System.Drawing.Point(3, 69)
+        Me.ForElemDataGridView1.Name = "ForElemDataGridView1"
+        Me.ForElemDataGridView1.ReadOnly = True
+        Me.ForElemDataGridView1.Size = New System.Drawing.Size(509, 229)
+        Me.ForElemDataGridView1.TabIndex = 7
+        Me.ForElemDataGridView1.Visible = False
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        Me.DataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn12.DataPropertyName = "codi_f1"
+        Me.DataGridViewTextBoxColumn12.HeaderText = "Codi Formula"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        Me.DataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn13.DataPropertyName = "codi_e1"
+        Me.DataGridViewTextBoxColumn13.HeaderText = "Codi Element"
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.DataGridViewTextBoxColumn13.ReadOnly = True
+        Me.DataGridViewTextBoxColumn13.Visible = False
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn14.DataPropertyName = "qt"
+        Me.DataGridViewTextBoxColumn14.HeaderText = "Quantitat"
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        Me.DataGridViewTextBoxColumn14.ReadOnly = True
         '
         'ElementDataGridView
         '
@@ -229,7 +280,7 @@ Partial Class Form2
         '
         Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "codi_e"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "codi_e"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Codi Element"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
@@ -237,7 +288,7 @@ Partial Class Form2
         '
         Me.DataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.DataGridViewTextBoxColumn5.DataPropertyName = "nom"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "nom"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Nom"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         Me.DataGridViewTextBoxColumn5.ReadOnly = True
         '
@@ -245,7 +296,7 @@ Partial Class Form2
         '
         Me.DataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.DataGridViewTextBoxColumn6.DataPropertyName = "data"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "data"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Data"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         Me.DataGridViewTextBoxColumn6.ReadOnly = True
         '
@@ -268,11 +319,41 @@ Partial Class Form2
         '
         'DataGridView3
         '
+        Me.DataGridView3.AllowUserToAddRows = False
+        Me.DataGridView3.AllowUserToDeleteRows = False
+        Me.DataGridView3.AutoGenerateColumns = False
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn11, Me.Codie1DataGridViewTextBoxColumn1, Me.QtDataGridViewTextBoxColumn1})
+        Me.DataGridView3.DataSource = Me.ForElemBindingSource
         Me.DataGridView3.Location = New System.Drawing.Point(3, 6)
         Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.ReadOnly = True
         Me.DataGridView3.Size = New System.Drawing.Size(509, 292)
         Me.DataGridView3.TabIndex = 3
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "codi_f1"
+        Me.DataGridViewTextBoxColumn11.HeaderText = "Codi Formula"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.ReadOnly = True
+        '
+        'Codie1DataGridViewTextBoxColumn1
+        '
+        Me.Codie1DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Codie1DataGridViewTextBoxColumn1.DataPropertyName = "codi_e1"
+        Me.Codie1DataGridViewTextBoxColumn1.HeaderText = "Codi Element"
+        Me.Codie1DataGridViewTextBoxColumn1.Name = "Codie1DataGridViewTextBoxColumn1"
+        Me.Codie1DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'QtDataGridViewTextBoxColumn1
+        '
+        Me.QtDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.QtDataGridViewTextBoxColumn1.DataPropertyName = "qt"
+        Me.QtDataGridViewTextBoxColumn1.HeaderText = "Quantitat"
+        Me.QtDataGridViewTextBoxColumn1.Name = "QtDataGridViewTextBoxColumn1"
+        Me.QtDataGridViewTextBoxColumn1.ReadOnly = True
         '
         'ForElemDataGridView
         '
@@ -312,10 +393,52 @@ Partial Class Form2
         Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
         Me.DataGridViewTextBoxColumn9.ReadOnly = True
         '
-        'ForElemBindingSource
+        'MenuStrip1
         '
-        Me.ForElemBindingSource.DataMember = "forElem"
-        Me.ForElemBindingSource.DataSource = Me.LaboratoriDataSet
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DadesToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(734, 24)
+        Me.MenuStrip1.TabIndex = 1
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'DadesToolStripMenuItem
+        '
+        Me.DadesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MostrarTaulesToolStripMenuItem, Me.FiltrarDadesToolStripMenuItem})
+        Me.DadesToolStripMenuItem.Name = "DadesToolStripMenuItem"
+        Me.DadesToolStripMenuItem.Size = New System.Drawing.Size(83, 20)
+        Me.DadesToolStripMenuItem.Text = "Filtrar dades"
+        '
+        'MostrarTaulesToolStripMenuItem
+        '
+        Me.MostrarTaulesToolStripMenuItem.Name = "MostrarTaulesToolStripMenuItem"
+        Me.MostrarTaulesToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.MostrarTaulesToolStripMenuItem.Text = "Totes les dades"
+        '
+        'FiltrarDadesToolStripMenuItem
+        '
+        Me.FiltrarDadesToolStripMenuItem.Name = "FiltrarDadesToolStripMenuItem"
+        Me.FiltrarDadesToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.FiltrarDadesToolStripMenuItem.Text = "Filtrar dades..."
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(544, 49)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(178, 268)
+        Me.ComboBox1.TabIndex = 4
+        '
+        'LabelFiltre
+        '
+        Me.LabelFiltre.AutoSize = True
+        Me.LabelFiltre.Location = New System.Drawing.Point(613, 33)
+        Me.LabelFiltre.Name = "LabelFiltre"
+        Me.LabelFiltre.Size = New System.Drawing.Size(29, 13)
+        Me.LabelFiltre.TabIndex = 6
+        Me.LabelFiltre.Text = "Nom"
+        Me.LabelFiltre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FormulaTableAdapter
         '
@@ -337,34 +460,26 @@ Partial Class Form2
         '
         Me.ForElemTableAdapter.ClearBeforeFill = True
         '
-        'MenuStrip1
+        'ButtonDelete
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DadesToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(849, 24)
-        Me.MenuStrip1.TabIndex = 1
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'DadesToolStripMenuItem
-        '
-        Me.DadesToolStripMenuItem.Name = "DadesToolStripMenuItem"
-        Me.DadesToolStripMenuItem.Size = New System.Drawing.Size(83, 20)
-        Me.DadesToolStripMenuItem.Text = "Filtrar dades"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(583, 55)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 2
+        Me.ButtonDelete.BackColor = System.Drawing.Color.DarkRed
+        Me.ButtonDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonDelete.ForeColor = System.Drawing.Color.White
+        Me.ButtonDelete.Location = New System.Drawing.Point(544, 313)
+        Me.ButtonDelete.Name = "ButtonDelete"
+        Me.ButtonDelete.Size = New System.Drawing.Size(178, 40)
+        Me.ButtonDelete.TabIndex = 7
+        Me.ButtonDelete.Text = "ELIMINAR REGISTRE"
+        Me.ButtonDelete.UseVisualStyleBackColor = False
         '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(849, 367)
-        Me.Controls.Add(Me.TextBox1)
+        Me.ClientSize = New System.Drawing.Size(734, 366)
+        Me.Controls.Add(Me.ButtonDelete)
+        Me.Controls.Add(Me.LabelFiltre)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -372,18 +487,18 @@ Partial Class Form2
         Me.Text = "Taules"
         Me.TabControl1.ResumeLayout(False)
         Me.Formules_TabPage.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FormulaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridViewForElem, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ForElemBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LaboratoriDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FormulaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FormulaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Elements_TabPage.ResumeLayout(False)
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ForElemDataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ElementDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ElementBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ElemForm_TabPage.ResumeLayout(False)
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ForElemDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ForElemBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -406,24 +521,35 @@ Partial Class Form2
     Friend WithEvents ForElemTableAdapter As laboratoriDataSetTableAdapters.forElemTableAdapter
     Friend WithEvents ForElemBindingSource As BindingSource
     Friend WithEvents ForElemDataGridView As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents DadesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FiltrarDadesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MostrarTaulesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DataGridViewForElem As DataGridView
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents LabelFiltre As Label
+    Friend WithEvents Codif1DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
+    Friend WithEvents Codie1DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents QtDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents ForElemDataGridView1 As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents CodifDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NomDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DataDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ActivaDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents DataGridView3 As DataGridView
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents DadesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
+    Friend WithEvents Codie1DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents QtDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ButtonDelete As Button
 End Class
