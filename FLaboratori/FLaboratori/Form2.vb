@@ -27,6 +27,7 @@
                 dadesTaules(tabI)
             Case 2
                 Me.ForElemTableAdapter.Fill(Me.LaboratoriDataSet.forElem)
+                Me.Size = New System.Drawing.Size(560, 405)
                 'tabI = ForElemDataGridView
         End Select
     End Sub
@@ -92,11 +93,13 @@
         Dim dr = tabI.RowCount
         Dim i As Integer = 0
         ComboBox1.Items.Clear()
-        While i <> dr
-            ComboBox1.Items.Add(tabI.Rows(i).Cells(1).Value)
-            i += 1
-        End While
-        ComboBox1.SelectedIndex = 0
+        If dr > 0 Then
+            While i <> dr
+                ComboBox1.Items.Add(tabI.Rows(i).Cells(1).Value)
+                i += 1
+            End While
+            ComboBox1.SelectedIndex = 0
+        End If
         modFormula()
     End Sub
 
@@ -109,7 +112,7 @@
         out = MsgBox("Es borraran tots els registres de l'element o formula seleccionats i les seves relacions!!",
                      vbExclamation + vbYesNo + vbDefaultButton2, "Ojo!")
 
-        If (out = 6) Then
+        If (out = 6) Then 'Eliminar Formula
             Dim dr
             If TabControl1.SelectedIndex = 0 Then
                 dr = DataGridView3.RowCount
@@ -128,15 +131,28 @@
                                            FormulaDataGridView.Rows(0).Cells(3).Value)
                 FiltrarDadesToolStripMenuItem_Click(sender, e)
 
-            ElseIf TabControl1.SelectedIndex = 1 Then
+            ElseIf TabControl1.SelectedIndex = 1 Then 'Eliminar Element
                 dr = DataGridView3.RowCount
-                Dim formules() = {vbNull}
+                Dim formules As New List(Of String)
                 Dim i As Integer = 0
-                While i <> dr
+                While i <> dr 'Eliminar Element de la taula ForElem
                     If DataGridView3.Rows(i).Cells(1).Value = ElementDataGridView.Rows(0).Cells(0).Value Then
                         If Not formules.Contains(DataGridView3.Rows(i).Cells(0).Value) Then
-                            ReDim Preserve formules(DataGridView3.Rows(i).Cells(0).Value) 'comprovar
+                            formules.Add(DataGridView3.Rows(i).Cells(0).Value)
                         End If
+
+                        ForElemTableAdapter.Delete(DataGridView3.Rows(i).Cells(0).Value,
+                                                   DataGridView3.Rows(i).Cells(1).Value,
+                                                   DataGridView3.Rows(i).Cells(2).Value)
+                    End If
+                    i += 1
+                End While
+
+                Me.ForElemTableAdapter.Fill(Me.LaboratoriDataSet.forElem)
+                dr = DataGridView3.RowCount
+                i = 0
+                While i <> dr 'Eliminar Formules de la taula ForElem que utilitzen aquell element
+                    If formules.Contains(DataGridView3.Rows(i).Cells(0).Value) Then
                         ForElemTableAdapter.Delete(DataGridView3.Rows(i).Cells(0).Value,
                                                    DataGridView3.Rows(i).Cells(1).Value,
                                                    DataGridView3.Rows(i).Cells(2).Value)
@@ -145,9 +161,10 @@
                 End While
 
                 Me.FormulaTableAdapter.Fill(Me.LaboratoriDataSet.formula)
+                Me.ForElemTableAdapter.Fill(Me.LaboratoriDataSet.forElem)
                 dr = FormulaDataGridView.RowCount
                 i = 0
-                While i <> dr
+                While i <> dr 'Eliminar Formules de la taula formules
                     If formules.Contains(FormulaDataGridView.Rows(i).Cells(0).Value) Then
                         FormulaTableAdapter.Delete(FormulaDataGridView.Rows(i).Cells(0).Value,
                                                    FormulaDataGridView.Rows(i).Cells(1).Value,
@@ -162,6 +179,7 @@
                                            ElementDataGridView.Rows(0).Cells(2).Value)
 
                 FiltrarDadesToolStripMenuItem_Click(sender, e)
+                Form1.FormulaTableAdapter.Fill(Form1.LaboratoriDataSet.formula)
             End If
             MsgBox("S'han actualitzar els registres")
         End If
